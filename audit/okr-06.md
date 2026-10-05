@@ -43,3 +43,26 @@
 | protiv.infokiller[1].a | «Равенства не обещаю» | + минус ACA признан: курящие реже страхуются, надбавку держим умеренной | https://respiratory-therapy.com/public-health/smoking/tobacco/aca-tobacco-surcharges-reducing-insurance-coverage/ |
 | arsenal.stats[0].fact | надбавка курящим до 50% (обобщённо) | «на рынке ACA — до 50%» | https://www.healthcare.gov/how-plans-set-your-premiums/ |
 | verdict.why | «добровольность скидки мнимая» | «За привёл данные Yale, но не доказал расползание границы» | — |
+
+## Повторная проверка
+| Путь в JSON | Что проверено | Вердикт | Источник (URL) | Правка аудитора |
+|---|---|---|---|---|
+| za.theses[1] (весь) | Yale (Friedman, Schpero, Busch, Health Affairs, 2016): в 2014 охват курящих на 12% ниже при высшей надбавке; «not helping them stop smoking» | ✓ | https://respiratory-therapy.com/public-health/smoking/tobacco/aca-tobacco-surcharges-reducing-insurance-coverage/ | — |
+| za.expect[1].a | Надбавка не помогла бросить, страховаться стали реже | ✓ | там же | — |
+| protiv.infokiller[1].a | Минус ACA признан; «держим умеренной» совпадает с советом Busch («restricting them to a low level») | ✓ | там же | — |
+| za.theses[2].primer; protiv.theses[2].primer; protiv.attacks[2] | John Hancock: «Customers do not have to log their activities to get coverage»; скидка «up to 15 percent» в расширенной программе | ⚠ | https://www.insurancejournal.com/news/national/2018/09/19/501747.htm | Скидку дают за выполнение норм нагрузки по трекеру, а не за сами данные; это страхование жизни. Оба primer переписаны: «(страхование жизни)… скидка до 15% за нормы по трекеру» |
+| za.attacks[0]; protiv.expect[0].a | МКБ-10 F17: «Mental and behavioural disorders due to use of tobacco» | ✓ | https://icd.who.int/browse10/2019/en/JsonGetChildrenConcepts?ConceptId=F10-F19&useHtml=false | — |
+| za.attacks[2] | «в корпоративном ДМС анкетирование застрахованных не проводится» | ✓ (2017, устарело?) | https://finance.rambler.ru/economics/36074830-zdorove-dorozhe-v-roznitsu/ | — |
+| protiv.theses[0].primer | Янин («Эксперт РА»): личный ДМС берут, чтобы «отбить» полис; страховщики «вынуждены повышать стоимость полиса для всех» | ✓ (2017, устарело?) | там же | — |
+| arsenal.stats[0].fact | «Tobacco use: … up to 50% more» на рынке healthcare.gov | ✓ | https://www.healthcare.gov/how-plans-set-your-premiums/ | — |
+| protiv.expect[2].a | ОМС бесплатно по всей России (326-ФЗ, ст. 16); регулятор — Банк России | ✓ (проверено в исходном аудите, п. 2, 11) | https://base.garant.ru/12180688/7a58987b486424ad79b62aa427dab1df/ | — |
+| protiv.theses[1].tezis/pochemu | Логика: «возраст» назван врождённым признаком — легко оспорить | ⚠ (логика) | — | «врождённый/по врождённому» → «неизменный/по неизменному» |
+| protiv.ask[0]; verdict.why | Логика и стиль: в рамке «управляемый риск»; verdict учитывает данные Yale, 24 слова | ✓ | — | — |
+
+Валидатор: `python3 work/validate_card.py docs/data/cards/okr-06.json` → OK, 0 замечаний.
+
+## Итого повторной проверки: ошибок 2 (✗ 0, ⚠ 2, ? 0), обе исправлены аудитором
+
+ГОТОВО
+- что изменилось: ЗА №2 теперь про надбавку курящим (Yale 2016, −12% охвата), ЗА №3 и ПРОТИВ №3 на примере John Hancock (страхование жизни, скидка до 15% за нормы по трекеру, полис и без трекера); пример ПРОТИВ №1 переписан на цитату «Эксперт РА» (2017).
+- Убраны рискованные «курение — выбор, как пол» и «отказ в ДМС — не отказ в лечении»; добавлены атака F17 (МКБ-10), атака на спираль (корпоративный ДМС без анкет) и признание минуса ACA; «до закона 2010» и обобщение надбавки 50% исправлены.
