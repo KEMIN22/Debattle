@@ -113,7 +113,7 @@
         "a": "Закон делит на «разрешённых» и «неразрешённых», допуск даёт ведомство. Для малого бизнеса барьер — ожидание и неопределённость."
       },
       {
-        "q": "Закон считает VPN при преступлении отягчающим. Вы против?",
+        "q": "Следователи предлагают считать VPN при преступлении отягчающим. Вы против?",
         "a": "Нет: отягчающее обстоятельство бьёт по виновному. Я против массового ограничения для всех."
       }
     ]
@@ -122,16 +122,16 @@
     "stats": [
       {
         "fact": "Роскомнадзор сообщил об ограничении доступа к 469 VPN-сервисам",
-        "source": "Anti-Malware.ru, со ссылкой на Роскомнадзор, конец февраля 2026",
+        "source": "ComNews, со ссылкой на Роскомнадзор, конец февраля 2026",
         "year": 2026,
-        "url": "https://www.anti-malware.ru/news/2026-02-26-121598/49176?page=12",
+        "url": "https://www.comnews.ru/content/244002/2026-02-26/2026-w09/1009/roskomnadzor-ogranichil-dostup-k-469-vpn-servisam",
         "verified": true
       },
       {
         "fact": "С 1 марта 2024 в России запрещена реклама и популяризация VPN-сервисов",
         "source": "PPC.World",
         "year": 2024,
-        "url": "https://ppc.world/news/v-rossii-mogut-vvesti-shtrafy-za-poisk-ekstremistskih-materialov-i-reklamu-vpn/",
+        "url": "https://ppc.world/news/s-1-marta-rossiyanam-nelzya-budet-ispolzovat-vpn-dlya-dostupa-k-zapreschennym-resursam/",
         "verified": true
       }
     ],
