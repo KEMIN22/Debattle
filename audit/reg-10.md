@@ -13,3 +13,12 @@
 - Рискованно вслух: «обязательных уроков ИИ нет» — соперник может процитировать РБК про «обязательный перечень внеурочки»; говорить «уроков в сетке нет, курс внеурочный и рекомендованный».
 
 ## Итого: ошибок 2 (✗ 0, ⚠ 2, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| za.theses[0].primer | «В школах с 1 сентября 2026 вводят профиль ИИ» | «…в углублённой информатике вводят профиль ИИ» | https://expert.ru/news/v-shkolakh-s-1-sentyabrya-nachnut-izuchat-profil-iskusstvennyy-intellekt |
+| za.infokiller[1].a | «Обязательных уроков ИИ в этих шагах нет» | «Уроков ИИ в сетке нет; профиль по выбору, курс рекомендован, объём решает школа» | https://science.mail.ru/news/56144-minprosvesheniya-dobavilo-kurs-po-ii-i-kiberbezopasnosti/ |
+| traps[0].exit | «обязательных уроков нет» | «уроков ИИ в сетке нет; курс внеурочный и рекомендованный, объём решает школа» | https://www.postupashkin.ru/news/vneurochnye-kursy-vtoraya-chetvert-2026 |
+| verdict.why | «внеурочка… без обязательных уроков» | «рекомендованная внеурочка… без уроков ИИ в сетке» | https://science.mail.ru/news/56144-minprosvesheniya-dobavilo-kurs-po-ii-i-kiberbezopasnosti/ |
+| protiv.expect[2].a | «закрепляет направление для всей школы» | «…для всех 10–11 классов» | https://xn--90aivcdt6dxbc.xn--p1ai/articles/news/s-2027-goda-uroki-matematiki-biologii-khimii-i-fiziki-stanut-bolee-prikladnymi/ |
