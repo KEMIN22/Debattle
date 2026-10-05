@@ -32,3 +32,27 @@
 - **Рискованно вслух:** «Disney лицензировал 200+ героев» в настоящем времени — легко опровергается. «Дешевле в 10 раз» как факт. «Союзмультфильм — только рутина» без оговорки про «гибридную модель». Jo Jo Funland — канал мог быть удалён, проверить накануне. verdict.why опирается на лицензии — переписать без Disney–OpenAI.
 
 ## Итого: ошибок 7 (✗ 0, ⚠ 6, ? 1)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| za.theses[0].primer | ТАСС + ролик Сбера (сюжет GigaChat — противоречие) | ТАСС: ИИ для фонов, света, поиска ошибок; творчество за людьми | https://www.osnmedia.ru/kultura/soyuzmultfilm-ne-planiruet-zamenyat-kreativnye-professii-ii/ |
+| za.theses[1].primer | 2028, дешевле в 10 раз | 2027–2028, в 5–10 раз дешевле (заявил) | https://kino.mail.ru/news/105082-v-rf-vyijdet-pervyij-sozdannyij-s-pomoschyu-nejrosetej-polnometrazhnyij-multfilm/ |
+| za.theses[2] | Правила + лицензия Disney–OpenAI | Договоры защищают работу: IATSE — пособие и переобучение при потере работы из-за ИИ; TAG — оплата и титры | https://variety.com/2024/tv/news/animation-guild-artificial-intelligence-amptp-contract-1236193937/ |
+| za.attacks[0] | ~200 экспертов | письмо Fairplay от ~200 организаций и экспертов | https://www.tubefilter.com/2026/04/01/youtube-fairplay-kids-ai-open-letter/ |
+| za.attacks[1] | Disney лицензирует героев OpenAI | Disney судится с Midjourney — вопрос решают суды | https://chatgptiseatingtheworld.com/category/disney-v-midjourney/ |
+| za.attacks[2] | Critterz: «аниматоров не убрали» | Атака на ПРОТИВ №3: IATSE даёт пособие и переобучение | https://variety.com/2024/tv/news/animation-guild-artificial-intelligence-amptp-contract-1236193937/ |
+| za.expect[0].a | Disney лицензировал 200+ героев | без лицензии: правообладатель идёт в суд | — |
+| za.expect[2].a | «уже требуют правил» | YouTube принял меры против 7 каналов, 2 закрыл (после The 74) | https://www.the74million.org/zero2eight/ai-slop-is-flooding-childrens-media-parents-should-be-very-alarmed/ |
+| za.infokiller[0].a | Critterz 2027 | + «Самовар» 2027–2028 | см. №8, №15 |
+| za.infokiller[1] | Sora закрыта | + сделка Disney закрылась вместе с Sora | https://www.mediapost.com/publications/article/413822/ |
+| za.infokiller[2].a | сюжет GigaChat; «Самовар» к 2028 | гибрид (Слащева); ролик Сбера — эксперимент AI Journey | https://www.osnmedia.ru/kultura/soyuzmultfilm-ne-planiruet-zamenyat-kreativnye-professii-ii/ |
+| protiv.theses[0].pochemu/primer | 50 роликов/день, редактор не успевает | метка ИИ на YouTube только для «реалистичного», мультфильмы вне правила; 50/день — в пример | https://www.the74million.org/zero2eight/ai-slop-is-flooding-childrens-media-parents-should-be-very-alarmed/ |
+| protiv.attacks[0] | Critterz — план | «Самовар» — тоже план, срок сдвигали (бьёт по ЗА №2) | https://kino.mail.ru/news/105082-v-rf-vyijdet-pervyij-sozdannyij-s-pomoschyu-nejrosetej-polnometrazhnyij-multfilm/ |
+| protiv.attacks[1] | Flash / «Масяню» Куваев рисовал сам | «Flow»: Оскар, €3,5 млн, бесплатный Blender | https://en.wikipedia.org/wiki/Flow_(2024_film) |
+| protiv.expect[2] | Disney лицензировал 200 персонажей | «YouTube закрыл каналы — система работает?» → после журналистов; метка не для мультфильмов | https://www.the74million.org/zero2eight/ai-slop-is-flooding-childrens-media-parents-should-be-very-alarmed/ |
+| arsenal.quote.url | нет | добавлен URL стенограммы NPR | https://www.tpr.org/arts-culture/2025-10-23/filmmaker-guillermo-del-toro-says-id-rather-die-than-use-generative-ai |
+| traps[0] | сделка Disney «под вопросом» | закончилась вместе с Sora | https://www.mediapost.com/publications/article/413822/ |
+| verdict.why | опора на лицензии | иски, договоры (пособие, переобучение), требования к YouTube; нет вышедшего полного метра | — |
+
+protiv.infokiller[2] (№19, ?) оставлен: без номера статьи, общий принцип. validate_card.py: 0 замечаний.
