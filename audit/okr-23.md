@@ -40,3 +40,24 @@
 | protiv.attacks[2] | «Обращение Путина» 2023 (политика, мимо) | Kapwing — один аккаунт и весь ИИ-слоп; лента крутит чужой спрос (по тезису ЗА №1) | https://www.kapwing.com/blog/ai-slop-report-the-global-rise-of-low-quality-ai-videos/ |
 | protiv.infokiller[0].a | Только подделки людей | + оскорбительные тексты — их держат правила площадок и закон | — (дыра из Логики) |
 | protiv.infokiller[2].a | Ст. 152.1 — только с согласия | «по общему правилу» | https://www.garant.ru/article/1284159/ |
+
+## Повторная проверка
+| # | Где (путь в JSON) | Утверждение (кратко) | Вердикт | Источник (URL) | Комментарий |
+|---|---|---|---|---|---|
+| 1 | arsenal.stats[0]; za.theses[0].primer | Kapwing: 104 (21%) ИИ-слоп, 165 (33%) брейнрот из первых 500 Shorts нового аккаунта | ✓ | https://www.kapwing.com/blog/ai-slop-report-the-global-rise-of-low-quality-ai-videos/ | URL открывается, цифры дословно |
+| 2 | arsenal.quote | Бернис Кинг: «I concur concerning my father. Please stop.», 7.10.2025 | ✓ | https://www.complex.com/life/a/jaelaniturnerwilliams/mlks-daughter-says-i-concur-after-zelda-williams-calls-out-ai-creators | «In a tweet on Tuesday (Oct. 7)» — «соцсети» верно |
+| 3 | za.infokiller[2]; traps[0] | Март 2026: OpenAI объявила о закрытии Sora; причина — фокус и вычисления | ✓ (вторичный по причине) | https://engadget.com/ai/openai-is-shutting-down-its-sora-video-generation-app-211023358.html; https://rits.shanghai.nyu.edu/ai/openai-shuts-down-sora-ai-video-app-discontinued-after-six-months/ | Цитата OpenAI «as we focus and compute demand grows» — на странице NYU Shanghai RITS |
+| 4 | za.theses[2] (новый) | 278 ИИ-каналов из 15 000 топ-каналов, ~117 млн долл./год по оценке | ✓ | https://www.dailydot.com/news/youtube-ai-slop-study/ | Логика: тезис сильнее прежнего, бьёт по мотиву конвейера; стиль в норме |
+| 5 | za.attacks[1] (новая) | Steal a Brainrot: лучшие предметы — только за деньги | ✓ | https://en.wikipedia.org/wiki/Steal_a_Brainrot (Polygon: «the best items are only available for cash») | Бьёт по новому тезису ПРОТИВ №2 корректно |
+| 6 | protiv.theses[1] (новый) | Steal a Brainrot (Roblox, 2025) — первой превысила 25 млн одновременно | ✓ | https://en.wikipedia.org/wiki/Steal_a_Brainrot (PocketGamer.biz, 7.10.2025) | Уязвим к attacks[1] ЗА (монетизация) — ответ: деньги платят сами игроки, т. е. спрос |
+| 7 | protiv.attacks[0] (новая) | Тралалело начал пользователь TikTok, фермы — следом | ✓ | https://en.wikipedia.org/wiki/Italian_brainrot | Бьёт по тезису ЗА №3 |
+| 8 | protiv.attacks[2] (новая) | Kapwing — один аккаунт, весь ИИ-слоп | ✓ | https://www.kapwing.com/blog/ai-slop-report-the-global-rise-of-low-quality-ai-videos/ | Бьёт по тезису ЗА №1; Путин удалён |
+| 9 | za.theses[1].primer; za.attacks[2]; za.expect[1].a; protiv.theses[2].primer; protiv.infokiller[0].a, [2].a | «расистские стереотипы»; «удержание — не просьба»; «OpenAI приостановила»; «по общему правилу» | ✓ | https://afrotech.com/openai-pauses-generations-martin-luther-king-jr; https://www.garant.ru/article/1284159/ | Логика и стиль в норме |
+
+Политика: упоминаний политиков РФ и политически рискованных примеров нет (пример с «обращением Путина» удалён). Валидатор: OK, 0 замечаний. Правок аудитором не вносилось.
+
+## Итого повторной проверки: ошибок 0 (✗ 0, ⚠ 0, ? 0)
+
+ГОТОВО
+- что изменилось: исправлены 4 ⚠ (URL Kapwing вместо битого AOL, «соцсети, 7.10.2025» у цитаты Бернис Кинг, «OpenAI объявила о закрытии Sora» вместо «закрыта из-за затрат», «по общему правилу» к ст. 152.1 ГК).
+- Слабые тезисы заменены: ЗА №3 → «фабрика — экономика просмотров» (278 каналов, ~117 млн долл.), ПРОТИВ №2 → Steal a Brainrot (25+ млн одновременно); атаки перенацелены, пример с Путиным удалён, «обезьяньи звуки» → «расистские стереотипы».
