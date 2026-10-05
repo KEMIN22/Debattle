@@ -41,6 +41,7 @@ if __name__ == '__main__':
     if not pats:
         print(txt[:6000]); sys.exit(0)
     L = txt.split('\n'); hit = 0
+    import signal; signal.signal(signal.SIGPIPE, signal.SIG_DFL)
     for i, l in enumerate(L):
         if any(re.search(p, l, re.I) for p in pats):
             hit += 1
