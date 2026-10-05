@@ -40,3 +40,21 @@
 | protiv.infokiller[1].a | Только недоверие | + «я понимаю» — ещё не понимание (ответ на дыру) | bohemian.com (выше) |
 | arsenal.quote | url cache/epub, «перевод приблизительный» | url files/4352, пометка снята | gutenberg (выше) |
 | verdict.why | Вайлант и Вена | Вайлант, шкала DMRS и Бергсон | — |
+
+## Повторная проверка
+| # | Где (путь в JSON) | Утверждение (кратко) | Вердикт | Источник (URL) | Что исправить |
+|---|---|---|---|---|---|
+| R1 | arsenal.stats[0]; za.theses[1].pochemu; za.infokiller[2].a | DMRS 2021: юмор — 7-й (высший) уровень, стресс «без искажений»; отрицание — 3-й (disavowal) | ✓ | https://pmc.ncbi.nlm.nih.gov/articles/PMC8555762/ (Table 1, Table 2, Table 6; также europepmc fullTextXML) | Ничего |
+| R2 | za.theses[1].primer | Grant Study, 30 лет; Вайлант: юмор среди зрелых защит | ✓ | https://www.kirkusreviews.com/book-reviews/a/george-e-vaillant/adaptation-to-life/ | Ничего («followed them up… for 30 years»; «mature mechanisms (suppression, humor)») |
+| R3 | za.theses[0].primer; za.infokiller[0].a; protiv.attacks[0]; arsenal.quote | Бергсон: «анестезия сердца»; комическое обращается «к чистому разуму» | ✓ | https://www.gutenberg.org/files/4352/4352-h/4352-h.htm | Ничего («appeal is to intelligence, pure and simple») |
+| R4 | protiv.theses[2]; protiv.infokiller[0].a | Юрчак и Бойер 2010: в стёбе не понять, поддержка или насмешка | ✓ | https://www.culanth.org/fieldsights/american-stiob-or-what-late-socialist-aesthetics-of-parody-reveal-about-contemporary-political-culture-in-the-west | Ничего («impossible to tell if stiob is sincere support, ridicule, or a mixture») |
+| R5 | za.attacks[1]; protiv.infokiller[1].a | Баумгартнер и Моррис: у зрителей выросла уверенность в политических знаниях | ✓ (вторичный) | https://bohemian.com/?p=255621 | Ничего |
+| R6 | za.infokiller[2].a | Вена 2017: чёрный юмор требует когнитивной обработки | ✓ | https://www.bps.org.uk/research-digest/if-you-sick-jokes-maybe-its-because-youre-just-so-smart | Ничего (журнал Cognitive Processing, 156 чел.) |
+| L | новые тезисы/атаки/ответы | Логика и стиль | ✓ | — | Атаки бьют по актуальным тезисам (П-атака 1 → Бергсон в З1; З-атака 3 → новый П3). Лимиты слов соблюдены, validate_card: 0 замечаний |
+
+Итог повторной проверки: ошибок 0 (✗ 0, ⚠ 0, ? 0). Правок в карточку не вносил.
+
+ГОТОВО
+- что изменилось: исходный ⚠ (Вайлант с чужим URL PMC) исправлен — stats[0] теперь DMRS 2021 (юмор 7-й уровень, отрицание 3-й), Grant Study подтверждён по Kirkus (30 лет, «suppression, humor»).
+- Слабые места заменены: З1 — Бергсон «к чистому разуму» вместо IQ-примера; П3 — двусмысленность стёба (Юрчак и Бойер 2010) вместо Бергсона; ЗА получили ответ про крах системы у Юрчака и рост уверенности у Баумгартнера–Морриса.
+- Все новые факты подтверждены на открытых страницах; аудитор правок не вносил.
