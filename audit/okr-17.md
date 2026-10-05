@@ -32,3 +32,25 @@
   - Остальное без политических рисков.
 
 ## Итого: ошибок 5 (✗ 0, ⚠ 5, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| za.theses[1].primer | IBM с 2016 убирает требование | IBM: было 95% вакансий с дипломом, к 2021 — меньше половины | https://fortune.com/2022/10/11/ibm-ceo-downplays-college-degree-importance-hiring-jobs/ |
+| za.theses[2] | Воронка, Школа 21 «по итогам интенсива» | Умение доказывает стаж, а не профиль: главбуху ПАО — любое высшее, без профильного стаж 5 из 7 | https://rulaws.ru/laws/Federalnyy-zakon-ot-06.12.2011-N-402-FZ/Statya-7/ |
+| za.attacks[0] | «лицензируемые профессии» | допуск по закону; Пленум разрешает, не обязывает | https://www.consultant.ru/document/cons_doc_LAW_421840/b004fed0b70d0f223e4a81f8ad6cd92af90a7e3b/ ; https://legalacts.ru/doc/Postanovlenie-Plenuma-VS-RF--N-2-ot-17-marta-2004-g-O-primenenii-sudami-Rossijskoj-Federacii-Trudovogo-kodeksa-Rossijskoj-Federacii/ |
+| za.attacks[2] | Госслужба — особый сектор (мимо) | Реестр подтверждает выдачу, не умение; части дипломов там нет | https://t-j.ru/reestr-diplomov/ |
+| za.expect[0].a | портфолио «за минуту» | сначала опыт и портфолио | — |
+| za.infokiller[0].a | «лицензируемые профессии» | снимают на бумаге; меняем умолчание, не запрещаем; допуск по закону | — |
+| protiv.theses[0] | «Врач — частный случай», граница плавная | Образование — деловое качество (Пленум ВС № 2, п. 10); пример ТК ст. 70 ч. 4 | https://legalacts.ru/doc/Postanovlenie-Plenuma-VS-RF--N-2-ot-17-marta-2004-g-O-primenenii-sudami-Rossijskoj-Federacii-Trudovogo-kodeksa-Rossijskoj-Federacii/ ; https://legalacts.ru/kodeks/TK-RF/chast-iii/razdel-iii/glava-11/statja-70/ |
+| protiv.theses[1].tezis | «единственный» дешёвый фильтр | «самый» дешёвый | — |
+| protiv.theses[1].primer | запрос в вуз не нужен | запрос в вуз — если записи нет | https://t-j.ru/reestr-diplomov/ |
+| protiv.theses[2].primer | 2023, рекрутеры не распознали | январь 2023, британская Schwa | https://fortune.com/2023/01/18/chatgpt-ai-applied-for-job-shortlisted-for-interview |
+| protiv.attacks[2] | ФРДО — довод за диплом (не атака) | Автоотказ — законный выбор работодателя (Пленум, п. 10) | (Пленум, см. выше) |
+| protiv.expect[1].a | единая планка, одинаковая для всех | планка с публичными правилами и госпроверкой | — |
+| protiv.infokiller[0].a | «нет лицензирования» | где закон не требует образования, их и так берут | — |
+| protiv.infokiller[1].a | ошибка исправляется откатом | в ИТ ошибки ловят тесты и ревью; врача — поздно | — |
+| arsenal.stats[1] | «лишь экспертиза», year 0 | без фразы про экспертизу; ПП РФ № 825, year 2021 | https://obrnadzor.gov.ru/gosudarstvennye-uslugi-i-funkczii/7701537808-gosfunction/formirovanie-i-vedenie-federalnogo-reestra-svedenij-o-dokumentah-ob-obrazovanii-i-ili-o-kvalifikaczii-dokumentah-ob-obuchenii/ |
+| arsenal.quote | пусто, verified:false | дословно ст. 64 ч. 1, verified:true | https://legalacts.ru/kodeks/TK-RF/chast-iii/razdel-iii/glava-11/statja-64/ |
+| traps[1].exit | «лицензируемые профессии» | врач и педагог — допуск по закону | — |
+| verdict.why | Школа 21 | Пленум + IBM, без Школы 21 | — |
