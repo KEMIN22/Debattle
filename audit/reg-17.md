@@ -1,0 +1,34 @@
+# reg-17 — Субсидии предприятиям малых городов
+Режим: FACTS
+
+## Факты
+| # | Где (путь в JSON) | Утверждение (кратко) | Вердикт | Источник (URL) | Что исправить |
+|---|---|---|---|---|---|
+| 1 | arsenal.stats[0] | 321 моногород в 61 регионе, свыше 13,4 млн жителей (2020) | ⚠ устарело | https://ppt.ru/obzory/vstupaet-v-silu/rasporyazhenie-pravitelstva-rf-11-03-2026-469-r-o-perechne-monogorodov ; 321 и 13,6 млн (2022): https://rg.ru/2022/09/08/monogorod-prosiat-umerit-zaprosy.html ; 61 субъект: https://sciact.uiec.ru/public/article/1517 | URL карточки (aspirant.msu.ru PDF) открывает главную страницу, цифры там нет. С 1 июня 2026 действует новый перечень: 264 моногорода (распоряжение Правительства № 469-р от 11.03.2026). Заменить на «С 1 июня 2026 в перечне 264 моногорода (было 321)», year 2026, URL ppt.ru. Цифру 13,4 млн убрать или дать «около 13,6 млн (2022, при 321 моногороде)» с URL rg.ru |
+| 2 | arsenal.stats[1] | Резиденты ТОР: тариф взносов 7,6% на новых рабочих местах, 10 лет, ст. 427 НК | ⚠ мелко | https://buh.ru/news/rezidentam-tor-rasshiryat-vozmozhnosti-po-primeneniyu-lgot-po-strakhovym-vznosam.html (7,6%, 10 лет, ст. 427); новые места: https://www.consultant.ru/document/cons_doc_LAW_344347/f9bc164b79773074aaba08c32f995c59c1390af4/ ; условия: https://www.garant.ru/consult/nalog/2082087/ | Суть верна. Год статьи buh.ru — 2024, а не 2023. Льгота не для всех: в ДФО — получившим статус не позднее 31.12.2025 (garant), в ТОСЭР моногородов — в первые 3 года после создания ТОСЭР (продлевалось до конца 2024: https://buh.ru/news/uchet_nalogi/148960/). Добавить «для получивших статус в установленный срок» |
+| 3 | za.theses[1].primer, protiv.expect[2] | ТОСЭР в моногородах: взносы 7,6% на новые рабочие места | ✓ (с оговоркой) | https://www.consultant.ru/document/cons_doc_LAW_344347/f9bc164b79773074aaba08c32f995c59c1390af4/ | Верно для резидентов, получивших статус в первые 3 года ТОСЭР. Не говорить, что льгота доступна любому новому резиденту сейчас |
+| 4 | za.theses[0].primer, protiv.theses[2].primer, traps[2] | Пикалёво 2009: остановка заводов, перекрытая трасса, вмешательство правительства | ✓ | https://www.sostav.ru/news/2009/06/03/28/ ; https://www.kp.ru/daily/24305.4/499168/ | Нюанс: заводы встали в 2008, трассу А-114 перекрыли 2 июня 2009, Путин приехал 4 июня 2009. Формулировка «2009» допустима |
+| 5 | za.theses[2].primer | Фонд развития моногородов (функции ныне у ВЭБ.РФ) финансировал инфраструктуру | ✓ | https://legalacts.ru/doc/rasporjazhenie-pravitelstva-rf-ot-31122020-n-3710-r-ob-institutakh/ ; https://1000bankov.ru/news/veb-rf-prinimaet-zayavki-na/ | Фонд ликвидирован, полномочия переданы ВЭБ.РФ (распоряжение № 3710-р от 31.12.2020). Учесть: по реформе 2025 кредитную программу для моногородов передают от ВЭБ.РФ МСП Банку (https://rg.ru/2025/12/25/monogorod-fokus-podderzhki-smeshchaetsia.html), «ныне у ВЭБ.РФ» может устареть |
+| 6 | protiv.theses[0].primer, za.infokiller[1] | АвтоВАЗ получил господдержку в 2009–2010 | ✓ | https://www.interfax.ru/business/94970 ; https://rg.ru/2010/04/26/avtovaz.html | Можно усилить: 25 млрд руб. в 2009, всего более 70 млрд к апрелю 2010 (Шувалов, РГ) |
+
+## Итого: ошибок 2 (✗ 0, ⚠ 2, ? 0)
+Главное: stats[0] устарело — с 01.06.2026 моногородов 264, а не 321; URL карточки битый.
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| arsenal.stats[0] | 321 моногород, 61 регион, 13,4 млн (2020), битый URL aspirant.msu.ru | С 1 июня 2026 в перечне 264 моногорода (до этого 321), 2026 | https://ppt.ru/obzory/vstupaet-v-silu/rasporyazhenie-pravitelstva-rf-11-03-2026-469-r-o-perechne-monogorodov ; 321: https://rg.ru/2022/09/08/monogorod-prosiat-umerit-zaprosy.html |
+| arsenal.stats[1] | 7,6% на новых местах 10 лет, year 2023 | 7,6% 10 лет для получивших статус в установленный срок, year 2024 | https://buh.ru/news/rezidentam-tor-rasshiryat-vozmozhnosti-po-primeneniyu-lgot-po-strakhovym-vznosam.html |
+| za.theses[2].primer | «ныне функции у ВЭБ.РФ» | «позже его функции передали ВЭБ.РФ» (без утверждения о текущем статусе) | https://legalacts.ru/doc/rasporjazhenie-pravitelstva-rf-ot-31122020-n-3710-r-ob-institutakh/ |
+
+## Повторная проверка
+| # | Где (путь в JSON) | Утверждение (кратко) | Вердикт | Источник (URL) | Комментарий |
+|---|---|---|---|---|---|
+| 1 | arsenal.stats[0] | С 1 июня 2026 в перечне 264 моногорода (до этого 321) | ✓ | https://ppt.ru/obzory/vstupaet-v-silu/rasporyazhenie-pravitelstva-rf-11-03-2026-469-r-o-perechne-monogorodov ; 321: https://rg.ru/2022/09/08/monogorod-prosiat-umerit-zaprosy.html | «В перечень включено 264 муниципальных образования», вступил в силу 01.06.2026; 321 — РГ, 2022 |
+| 2 | arsenal.stats[1] | 7,6% 10 лет для получивших статус резидента ТОР в установленный срок, 2024 | ✓ | https://buh.ru/news/rezidentam-tor-rasshiryat-vozmozhnosti-po-primeneniyu-lgot-po-strakhovym-vznosam.html | Статья 27.05.2024: «получившие до 1 января 2023 года статус резидента ТОР … 7,6% в течение 10 лет», ст. 427 НК. Формулировка «в установленный срок» корректна |
+| 3 | za.theses[2].primer | Фонд развития моногородов, позже функции переданы ВЭБ.РФ | ✓ | https://legalacts.ru/doc/rasporjazhenie-pravitelstva-rf-ot-31122020-n-3710-r-ob-institutakh/ | Фонд в перечне ликвидируемых (прил. 2 к № 3710-р); полномочия по обязательствам переданы ВЭБ.РФ 31.05.2021 |
+
+Правок не потребовалось. validate_card.py: OK, 0 замечаний.
+
+ГОТОВО
+- что изменилось: stats[0] — устаревшие 321 моногород/13,4 млн и битый URL заменены на 264 моногорода с 01.06.2026 (№ 469-р, ppt.ru); stats[1] — уточнено «для получивших статус в установленный срок», год 2024; za.theses[2].primer — «ныне у ВЭБ.РФ» заменено на «позже его функции передали ВЭБ.РФ». Повторная проверка: все 3 пункта ✓.
