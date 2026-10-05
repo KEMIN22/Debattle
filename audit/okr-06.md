@@ -24,3 +24,22 @@
 - **Рискованно вслух.** Фраза «курение — выбор, как пол или возраст — нет» легко бьётся аргументом «зависимость — болезнь (F17)», поэтому лучше говорить «управляемый риск». Также рискованно противопоставление «ОМС спасёт, отказ в ДМС — не отказ в лечении»: оппонент напомнит про очереди. Цифр без источника не называть (в частности, «надбавка отпугнула от страховки», если только не со ссылкой на Yale 2016).
 
 ## Итого: ошибок 2 (✗ 0, ⚠ 2, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| za.theses[1] (весь) | «Цена по анкете выталкивает больных»; пример «до закона 2010 года» про диагнозы | «Надбавка курящим выталкивает из страховки, курить меньше не заставляет»; Yale 2016: −12% застрахованных при высшей надбавке (2014) | https://respiratory-therapy.com/public-health/smoking/tobacco/aca-tobacco-surcharges-reducing-insurance-coverage/ («is not helping them stop smoking») |
+| za.theses[2].primer | John Hancock продаёт только с Vitality | Полис дают без трекера, скидка до 15% — только за данные | https://www.insurancejournal.com/news/national/2018/09/19/501747.htm |
+| za.attacks[0] | «Курение — выбор»: среда и доход | + зависимость — диагноз МКБ-10 F17, а диагноз Против обещал не учитывать | https://icd.who.int/browse10/2019/en/JsonGetChildrenConcepts?ConceptId=F10-F19&useHtml=false |
+| za.attacks[2] | против старого тезиса «адресная помощь» | Атака на спираль: корпоративный ДМС без анкет | https://finance.rambler.ru/economics/36074830-zdorove-dorozhe-v-roznitsu/ |
+| za.expect[1].a | «Лучше добровольные скидки…» | Yale: надбавка не помогла бросить, страховаться стали реже | https://respiratory-therapy.com/public-health/smoking/tobacco/aca-tobacco-surcharges-reducing-insurance-coverage/ |
+| protiv.theses[0].primer | «индивидуальный ДМС убыточнее корпоративного» (без источника) | Эксперт РА: личный ДМС берут, чтобы «отбить» полис; цена растёт для всех (2017) | https://finance.rambler.ru/economics/36074830-zdorove-dorozhe-v-roznitsu/ |
+| protiv.theses[1].tezis/pochemu | «выбранное поведение… Выбор — другая категория» | «управляемый риск, а не врождённый признак… Привычку можно изменить» | — (рискованная формулировка) |
+| protiv.theses[2] (весь) | «Бедность лечат адресной помощью»; диспансеризация | «Запрет отнимает у здоровых скидку и стимул»; John Hancock: скидка до 15%, полис и без трекера | https://www.insurancejournal.com/news/national/2018/09/19/501747.htm |
+| protiv.attacks[2] | «утечки — довод защищать данные» | Полис John Hancock без трекера: добровольность реальна | https://www.insurancejournal.com/news/national/2018/09/19/501747.htm |
+| protiv.ask[0] | «Чем курение похоже на пол или возраст?» | «Почему управляемый риск стоит как неуправляемый?» | — |
+| protiv.expect[0].a | «Генетику и диагноз не учитываем» | Учитываем факт курения по анализу, а не диагноз (защита от F17) | — |
+| protiv.expect[2].a | «Отказ в ДМС — не отказ в лечении» | убрано; ОМС бесплатно по всей России, регулятор — Банк России | https://base.garant.ru/12180688/7a58987b486424ad79b62aa427dab1df/ |
+| protiv.infokiller[1].a | «Равенства не обещаю» | + минус ACA признан: курящие реже страхуются, надбавку держим умеренной | https://respiratory-therapy.com/public-health/smoking/tobacco/aca-tobacco-surcharges-reducing-insurance-coverage/ |
+| arsenal.stats[0].fact | надбавка курящим до 50% (обобщённо) | «на рынке ACA — до 50%» | https://www.healthcare.gov/how-plans-set-your-premiums/ |
+| verdict.why | «добровольность скидки мнимая» | «За привёл данные Yale, но не доказал расползание границы» | — |
