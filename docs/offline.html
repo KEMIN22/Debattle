@@ -14,8 +14,12 @@ html{font-size:18px}
 body{margin:0;background:var(--bk);color:var(--w);font-family:var(--f);font-weight:600;line-height:1.35;padding-bottom:60px}
 button,input,select{font:inherit;color:inherit}
 header{position:sticky;top:0;z-index:10;background:var(--bk);border-bottom:3px solid var(--o);padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:10px}
-.logo{font-weight:900;font-size:1rem;letter-spacing:.02em;text-transform:uppercase;cursor:pointer;line-height:1.1}
+.logo{flex:1;min-width:0;font-weight:900;font-size:1rem;letter-spacing:.02em;text-transform:uppercase;cursor:pointer;line-height:1.1}
 .logo b{color:var(--o)}
+.regsw{background:var(--pn2);color:#fff;border:2px solid var(--pn2);border-radius:10px;padding:5px 8px;font-weight:800;font-size:.68rem;line-height:1.15;cursor:pointer;min-height:44px;text-align:center;white-space:nowrap}
+.regsw b{display:block;font-size:.8rem;font-weight:900;color:var(--gr)}
+.regsw.on{border-color:var(--o)}.regsw.on b{color:var(--o)}
+.pool{text-align:center;color:var(--gr);font-size:.85rem;margin:6px 0 10px}.pool b{color:#fff}
 .btn{background:var(--o);color:#fff;border:0;border-radius:14px;padding:14px 18px;font-weight:900;font-size:1rem;cursor:pointer;min-height:52px}
 .btn.alt{background:var(--pn2)}
 .btn.ghost{background:transparent;border:2px solid var(--o);color:var(--o)}
@@ -101,6 +105,7 @@ a{color:var(--o)}
 <body>
 <header>
  <div class="logo" data-go="#/okr">Твой Ход <b>×</b> Дебаттл</div>
+ <button class="regsw" id="regsw" data-act="reg" aria-pressed="false">Региональные:<b>ВЫКЛ</b></button>
  <button class="btn" data-go="#/draw">🎲 Жребий</button>
 </header>
 <div class="wrap" id="app"><div class="empty">Загрузка…</div></div>
@@ -111,6 +116,8 @@ window.__DATA__={"topics":[{"id":"okr-01","stage":"okr","num":1,"title":"Спе�
 (function(){
 'use strict';
 var D=null, S={side:'za',q:''}, T=null, DR=null;
+/* региональные темы: по умолчанию ВЫКЛ, выбор запоминается */
+var REG=false;try{REG=localStorage.getItem('dbt_reg')==='1'}catch(e){REG=false}
 var app=document.getElementById('app');
 var h=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
 var $=function(id){return document.getElementById(id)};
@@ -119,6 +126,18 @@ function pick(a,n){var c=a.slice(),r=[];while(r.length<n&&c.length){r.push(c.spl
 var topicById=function(id){return D.topics.filter(function(t){return t.id===id})[0]};
 var clusterName=function(id){var c=D.clusters.filter(function(c){return c.id===id})[0];return c?c.name:''};
 var B=function(){return D.banks||{}};
+var vis=function(){return D.topics.filter(function(t){return REG||t.stage!=='reg'})};
+function temN(n){var a=n%10,b=n%100;return n+' '+(a===1&&b!==11?'тема':a>=2&&a<=4&&(b<12||b>14)?'темы':'тем')}
+function regUI(){var b=$('regsw');if(!b)return;b.className='regsw'+(REG?' on':'');b.setAttribute('aria-pressed',REG?'true':'false');b.innerHTML='Региональные:<b>'+(REG?'ВКЛ':'ВЫКЛ')+'</b>'}
+function setReg(on){
+ REG=!!on;try{localStorage.setItem('dbt_reg',REG?'1':'0')}catch(e){}
+ regUI();if(!D)return;
+ if(DR&&DR.topic.stage==='reg'&&!REG)DR=null;
+ if(location.hash==='#/draw'){var p=$('pool');if(p)p.innerHTML=poolHtml();if(!DR&&$('drawbox'))$('drawbox').innerHTML='';return}
+ if(!REG&&(location.hash==='#/reg'||(app.dataset.tid&&/^#\/t\//.test(location.hash)&&(topicById(app.dataset.tid)||{}).stage==='reg'))){location.hash='#/okr';return}
+ route();
+}
+function poolHtml(){return 'В жребии: <b>'+temN(vis().length)+'</b>'+(REG?'':' · только окружные')}
 
 /* ---------- загрузка ---------- */
 function getJson(u){return fetch(u,{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})}
@@ -148,6 +167,7 @@ function route(){
  var hs=location.hash||'#/okr',m;
  window.scrollTo(0,0);
  if(m=hs.match(/^#\/t\/([\w-]+)/))return viewTopic(m[1]);
+ if(hs==='#/reg'&&!REG){location.hash='#/okr';return}
  if(hs==='#/draw')return viewDraw();
  if(hs==='#/banks')return viewBanks();
  viewHome(hs==='#/reg'?'reg':'okr');
@@ -155,7 +175,7 @@ function route(){
 
 /* ---------- главная ---------- */
 function tabsHtml(cur){
- return '<div class="tabs">'+[['okr','Окружные'],['reg','Региональные'],['banks','Банки']].map(function(t){
+ return '<div class="tabs">'+[['okr','Окружные'],['reg','Региональные'],['banks','Банки']].filter(function(t){return REG||t[0]!=='reg'}).map(function(t){
   return '<button class="tab'+(cur===t[0]?' on':'')+'" data-go="#/'+t[0]+'">'+t[1]+'</button>'}).join('')+'</div>';
 }
 function norm(s){return String(s||'').toLowerCase().replace(/ё/g,'е')}
@@ -175,7 +195,7 @@ function viewHome(stage){
 function renderList(stage){
  var q=norm(S.q.trim()),out='',list;
  if(q){
-  list=D.topics.filter(function(t){
+  list=vis().filter(function(t){
    if(/^\d+$/.test(q))return String(t.num)===q;
    return norm(t.title+' '+t.short+' '+clusterName(t.cluster)+' '+(t.partner||'')).indexOf(q)>-1;
   });
@@ -239,7 +259,7 @@ function archetypeHtml(t,side,withSwitch){
  return o;
 }
 function viewTopic(id){
- var t=topicById(id);if(!t){location.hash='#/okr';return}
+ var t=topicById(id);if(!t||(t.stage==='reg'&&!REG)){location.hash='#/okr';return}
  if(!D.cards[id]&&S.side!=='a'&&S.side!=='b')S.side='a';
  if(D.cards[id]&&S.side!=='za'&&S.side!=='protiv')S.side='za';
  app.innerHTML='<button class="back" data-go="#/'+t.stage+'">← К списку</button><h1 class="ttl"><span class="n">'+(t.stage==='okr'?'Окр. ':'Рег. ')+t.num+'.</span> '+h(t.title)+'</h1>'+(t.partner?'<div class="partner">Партнёр: '+h(t.partner)+'</div>':'')+
@@ -247,10 +267,11 @@ function viewTopic(id){
  app.dataset.tid=id;
 }
 function act(a,v,el){
+ if(a==='reg')return setReg(!REG);
  if(a==='side'){S.side=v;var t=topicById(app.dataset.tid);if(DR&&$('drawcard')){return $('drawcard').innerHTML=cardHtml(DR.topic,S.side,true)}
   if(t)$('card').innerHTML=cardHtml(t,S.side,true);return}
  if(a==='print1')return printTopics([topicById(v)],true);
- if(a==='printAll'){var ts=D.topics.filter(function(t){return D.cards[t.id]});if(!ts.length)return alert('Готовых карточек пока нет');return printTopics(ts,false)}
+ if(a==='printAll'){var ts=vis().filter(function(t){return D.cards[t.id]});if(!ts.length)return alert('Готовых карточек пока нет');return printTopics(ts,false)}
  if(a==='mode')return setMode(v);
  if(a==='draw')return doDraw();
  if(a==='reveal'){S.side=DR.side;$('drawcard').innerHTML=cardHtml(DR.topic,DR.side,true);el.style.display='none';return}
@@ -315,11 +336,12 @@ var COMPS=['С места в карьер','Чужая тема','Один за 
 var mode='speech',useComp=false;
 function viewDraw(){
  app.innerHTML='<button class="back" data-go="#/okr">← К темам</button><div class="modes" id="modes"></div>'+
-  '<label class="chk"><input type="checkbox" id="comp"'+(useComp?' checked':'')+'> Усложнение</label>'+
+  '<div class="pool" id="pool">'+poolHtml()+'</div><label class="chk"><input type="checkbox" id="comp"'+(useComp?' checked':'')+'> Усложнение</label>'+
   '<button class="btn" style="width:100%;font-size:1.2rem;padding:18px" data-act="draw">🎲 Бросить жребий</button><div id="drawbox"></div>'+
   '<div id="timerbox"></div>';
  $('comp').addEventListener('change',function(){useComp=this.checked});
  drawModes();timerUI();
+ if(DR&&DR.topic.stage==='reg'&&!REG)DR=null;
  if(DR)drawBox();
 }
 function drawModes(){
@@ -349,7 +371,7 @@ function compInfo(c){
  return o;
 }
 function doDraw(){
- var t=rnd(D.topics),c=null;
+ var t=rnd(vis()),c=null;
  if($('comp')&&$('comp').checked){
   var n=rnd(COMPS),b=B().complications||{};c={name:n};
   if(n==='Чужая тема')c.words=pick(['Космос','Промышленность','Киноиндустрия','Искусственный интеллект','Садоводство','Музыка','Путешествие','Спорт','Природа'],3);
@@ -418,6 +440,7 @@ function stopTimer(){if(T&&T.iv)clearInterval(T.iv);T=null}
 function resetTimer(){stopTimer();timerUI()}
 
 /* ---------- старт ---------- */
+regUI();
 load().then(route).catch(function(){
  app.innerHTML='<div class="empty">Не удалось загрузить данные.<br>Откройте сайт по ссылке (GitHub Pages) или используйте файл offline.html</div>';
 });
