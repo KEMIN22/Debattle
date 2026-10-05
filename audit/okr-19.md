@@ -17,3 +17,20 @@
 - Рискованно вслух: protiv.attacks[2] «фиксировать надолго было выгодно» — знание задним числом; соперник ответит «в марте 2022 этого никто не знал — это и есть неопределённость». Лучше убрать. Причины скачка ставки (санкции, политика) не называть и «в стране нестабильно» не развивать в оценку власти — говорить про экономический шок и ставку. 85% — самооценка («по собственным оценкам»), не выдавать за измерение навыка.
 
 ## Итого: ошибок 2 (✗ 0, ⚠ 2, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| arsenal.stats[0].url/source/fact | url на релиз 2022 «Планировать свою жизнь…» | релиз «Квартира, автомобиль и бизнес», 26.06.2024; добавлено «по собственным оценкам» | https://wciom.ru/analytical-reviews/analiticheskii-obzor/kvartira-avtomobil-i-biznes |
+| arsenal.stats[1].url/fact/source | PDF consultant.ru | база ключевой ставки ЦБ; добавлено «далее 14% и 11%» (04.05, 27.05) | https://www.cbr.ru/hd_base/KeyRate/?UniDbQuery.Posted=True&UniDbQuery.From=01.02.2022&UniDbQuery.To=30.06.2022 |
+| arsenal.quote.author | Эйзенхауэр, речь 14.11.1957 | + «со ссылкой на армейскую поговорку» | https://www.presidency.ucsb.edu/documents/remarks-the-national-defense-executive-reserve-conference |
+| za.theses[2] | «Отказ запирать деньги — расчёт», ставка 20%→9,5% | «Когда шок прошёл, горизонт вернулся — значит, адаптация»; ВЦИОМ 11.2024: 29% vs 20–25% | https://wciom.ru/analytical-reviews/analiticheskii-obzor/vse-idet-po-planu |
+| protiv.theses[1] | «Гибкость держится на долгих активах»; «сменил работодателя» | «Без долгого плана цели достигаются реже»; 84% vs 48% | https://wciom.ru/analytical-reviews/analiticheskii-obzor/vse-idet-po-planu |
+| za.attacks[1] | «Подушка и переобучение — месяцы» (мимо тезиса) | на новый ПРОТИВ №2: корреляция, не причина | — |
+| za.attacks[2] | «Планы строят 85% молодых» (мимо) | на ПРОТИВ №3: на 5 лет 16% vs 10% | https://wciom.ru/analytical-reviews/analiticheskii-obzor/kvartira-avtomobil-i-biznes |
+| za.infokiller[1] | дубль ловушки «адаптация и утрата» | заготовка: «молодые планируют дальше — вы спорите с темой?» | — |
+| protiv.attacks[2] | «фиксировать надолго было выгодно» (задним числом) | на новый ЗА №3: 29% — все россияне, самооценка | https://wciom.ru/analytical-reviews/analiticheskii-obzor/vse-idet-po-planu |
+| protiv.expect[2].a | «подушка — реакция на шок, горизонт месяцы» (противоречие с ask[1]) | «если цель на годы — да; подушка на всякий случай — реакция» | — |
+| protiv.infokiller[0].a | «российских цифр не назову» | «прямых данных нет; но 84% vs 48%» | https://wciom.ru/analytical-reviews/analiticheskii-obzor/vse-idet-po-planu |
+| protiv.infokiller[2].a | «условия смягчились, горизонт короткий» | рост 2024 — средний по стране, молодым возврат не гарантирует | https://wciom.ru/analytical-reviews/analiticheskii-obzor/vse-idet-po-planu |
+| verdict.why | «ПРОТИВ признал, что цифр нет» | ЗА: долгие планы вернулись; ПРОТИВ не доказал утрату у молодых | — |
