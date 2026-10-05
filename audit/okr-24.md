@@ -50,3 +50,23 @@ EPMC = Europe PMC REST (тот же PMID; pubmed.ncbi.nlm.nih.gov не откр�
 | arsenal.quote.author | Стратерн 1997, Гудхарт 1975 | Стратерн (1997) вслед за Хоскином | https://en.wikipedia.org/wiki/Goodhart%27s_law |
 
 Валидатор: 0 замечаний.
+
+## Повторная проверка
+| # | Где (путь в JSON) | Утверждение (кратко) | Вердикт | Источник (URL) | Что исправлено |
+|---|---|---|---|---|---|
+| R1 | za.infokiller[0].a; za.attacks[1]; za.ask[1]; protiv.expect[0].a; traps[1].exit; protiv.infokiller[1,2].a | Jahrami 2024, Brain Sci, n=523: ортосомния 3,0/8,6/14,0% | ✓ ⚠ контекст | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:39595886&resultType=core&format=json | 3–14% — от ВСЕХ 523; трекеры сна у 176 (35,8%), значит среди владельцев 16–73/176 = 9–41%. ЗА «меньшинство» уязвимо. za.attacks[1] (звучал как рост «3 пациента → 14%») → «у 3–14% всех опрошенных в одном опросе 2024. Это не норма»; za.infokiller[0].a: + «Один срез, причину он не доказывает» (вместо «врач разберёт»); protiv.infokiller[1].a: + «среди владельцев трекеров сна — от 9 до 41%» (расчёт из чисел аннотации) |
+| R2 | za.theses[2]; za.expect[2].a; protiv.theses[0]; protiv.attacks[0]; za.attacks[0] | TRIPPA: к году трекер у 10%; «только Fitbit» +37 мин MVPA/нед к контролю (12 мес.); здоровье не улучшилось ни в одной группе | ✓ ⚠ формулировка | https://www.healio.com/news/endocrinology/20161006/activity-trackers-fail-to-improve-health-outcomes-with-or-without-incentives ; EPMC 27717766 («stemming the reduction») | Тезис «даже сняв трекер, люди двигаются больше» — анализ по группам, а не по снявшим → «Через год трекерная группа активнее контроля, хотя часы носили лишь 10%»; pochemu → «спад активности меньше, чем без трекера». za.attacks[0]: добавлено «в неделю» |
+| R3 | arsenal.stats[1] | Ding 2025, Lancet Public Health: 7000 vs 2000 — смертность −47% (HR 0,53), перегиб 5000–7000 | ✓ | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:40713949&resultType=core&format=json | — (оговорка авторов: остаточные искажения, связь ≠ причина) |
+| R4 | protiv.expect[1].a; protiv.infokiller[1].a; traps[2] | Simpson, Mazzeo 2017: N=493 студента, фитнес-трекинг связан с симптомами РПП | ✓ | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:%22fitness%20tracking%20technology%22%20AND%20AUTH:Simpson&resultType=core&format=json | — |
+| R5 | protiv.theses[2]; za.attacks[2]; za.infokiller[1].a | «Вероятно» из рекламы шагомера Manpo-kei, 1965; плато ~7500 | ✓ | https://whish.stanford.edu/wp-content/uploads/2019/10/Step-Volume-Intensity-Mortality_JAMA-IntMedicine-2019-.pdf («It likely derives from the trade name of a pedometer sold in 1965… Manpo-kei») | — |
+| R6 | za.theses[1].primer; za.infokiller[2].a | watchOS 11: пауза колец без потери серии наград | ✓ | https://www.apple.com/newsroom/2024/06/watchos-11-brings-powerful-health-and-fitness-insights/ | — |
+| R7 | arsenal.quote.author | Стратерн (1997) вслед за Хоскином (1996) | ✓ | https://en.wikipedia.org/wiki/Goodhart%27s_law | — |
+| R8 | za.theses[0].primer; za.infokiller[1].a; za.expect[1].a; traps[2].exit | «связаны с меньшей смертностью», смягчённый тон | ✓ стиль | — | — |
+
+Атаки по номерам после правок: ЗА 1→П1, 2→П2, 3→П3; ПРОТИВ 1→З3, 2→З1, 3→З2 — бьют. protiv.infokiller[2] теперь про сон. Валидатор: 0 замечаний.
+
+Итого RECHECK: ✗ 0, ⚠ 2 (исправлено мной), ? 0.
+
+ГОТОВО
+- что изменилось: исходно ⚠2 (ортосомния «данных нет», «число придумал маркетинг»); fixer — Jahrami 2024 (3–14%), «вероятно» Manpo-kei 1965, Ding 2025 вместо Ли в stats, Симпсон–Маццео 2017, тон про врачей; слабые тезисы ЗА№3/ПРОТИВ№1 заменены на TRIPPA (10% носят к году, +37 мин/нед, здоровье без изменений).
+- мои правки: тезис ЗА№3 — «трекерная группа активнее контроля» вместо «даже сняв трекер»; 3–14% помечены как доля всех опрошенных, ПРОТИВ получил «среди владельцев трекеров сна — 9–41%», ЗА — «один срез, причину не доказывает».
