@@ -20,3 +20,15 @@
 | arsenal.stats[0] | 321 моногород, 61 регион, 13,4 млн (2020), битый URL aspirant.msu.ru | С 1 июня 2026 в перечне 264 моногорода (до этого 321), 2026 | https://ppt.ru/obzory/vstupaet-v-silu/rasporyazhenie-pravitelstva-rf-11-03-2026-469-r-o-perechne-monogorodov ; 321: https://rg.ru/2022/09/08/monogorod-prosiat-umerit-zaprosy.html |
 | arsenal.stats[1] | 7,6% на новых местах 10 лет, year 2023 | 7,6% 10 лет для получивших статус в установленный срок, year 2024 | https://buh.ru/news/rezidentam-tor-rasshiryat-vozmozhnosti-po-primeneniyu-lgot-po-strakhovym-vznosam.html |
 | za.theses[2].primer | «ныне функции у ВЭБ.РФ» | «позже его функции передали ВЭБ.РФ» (без утверждения о текущем статусе) | https://legalacts.ru/doc/rasporjazhenie-pravitelstva-rf-ot-31122020-n-3710-r-ob-institutakh/ |
+
+## Повторная проверка
+| # | Где (путь в JSON) | Утверждение (кратко) | Вердикт | Источник (URL) | Комментарий |
+|---|---|---|---|---|---|
+| 1 | arsenal.stats[0] | С 1 июня 2026 в перечне 264 моногорода (до этого 321) | ✓ | https://ppt.ru/obzory/vstupaet-v-silu/rasporyazhenie-pravitelstva-rf-11-03-2026-469-r-o-perechne-monogorodov ; 321: https://rg.ru/2022/09/08/monogorod-prosiat-umerit-zaprosy.html | «В перечень включено 264 муниципальных образования», вступил в силу 01.06.2026; 321 — РГ, 2022 |
+| 2 | arsenal.stats[1] | 7,6% 10 лет для получивших статус резидента ТОР в установленный срок, 2024 | ✓ | https://buh.ru/news/rezidentam-tor-rasshiryat-vozmozhnosti-po-primeneniyu-lgot-po-strakhovym-vznosam.html | Статья 27.05.2024: «получившие до 1 января 2023 года статус резидента ТОР … 7,6% в течение 10 лет», ст. 427 НК. Формулировка «в установленный срок» корректна |
+| 3 | za.theses[2].primer | Фонд развития моногородов, позже функции переданы ВЭБ.РФ | ✓ | https://legalacts.ru/doc/rasporjazhenie-pravitelstva-rf-ot-31122020-n-3710-r-ob-institutakh/ | Фонд в перечне ликвидируемых (прил. 2 к № 3710-р); полномочия по обязательствам переданы ВЭБ.РФ 31.05.2021 |
+
+Правок не потребовалось. validate_card.py: OK, 0 замечаний.
+
+ГОТОВО
+- что изменилось: stats[0] — устаревшие 321 моногород/13,4 млн и битый URL заменены на 264 моногорода с 01.06.2026 (№ 469-р, ppt.ru); stats[1] — уточнено «для получивших статус в установленный срок», год 2024; za.theses[2].primer — «ныне у ВЭБ.РФ» заменено на «позже его функции передали ВЭБ.РФ». Повторная проверка: все 3 пункта ✓.
