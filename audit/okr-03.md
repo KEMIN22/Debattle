@@ -24,3 +24,21 @@
 - Рискованно вслух: «Указ 309 — 70%» легко опровергнуть. Прогноз ПРОТИВ attacks[2] о снятии отстранения — это политика, лучше убрать. Цитату из Конституции соперник обратит против ЗА: там «развитие физической культуры и спорта» без приоритета массового спорта.
 
 ## Итого: ошибок 5 (✗ 2, ⚠ 3, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| za.theses[1] (tezis/pochemu/primer) | «Цель — массовость, а не медали»; Указ 309 — 70% | Указ № 309 связал спорт со здоровьем: снизить нетрудоспособность к 2030 через систематические занятия спортом (п. «д») | https://www.garant.ru/products/ipo/prime/doc/408892634/ |
+| za.theses[2].primer | Лорды: «шага вперёд не случилось» | Комитет лордов (2013): мало свидетельств роста занятий | https://www.healthclubmanagement.co.uk/health-club-management-news/Lords-report-on-London-2012-legacy-more-needs-to-be-done/307516 |
+| za.attacks[1] | Универсиада-2013 (мимо) | Бьёт по ПРОТИВ №2: детскому тренеру нужна ставка, не чужая медаль | — |
+| za.attacks[2] | Игры БРИКС (мимо) | Бьёт по ПРОТИВ №3: 70% — миллионы, медали — единицы | https://legalacts.ru/doc/pasport-gosudarstvennoi-programmy-kompleksnoi-programmy-rossiiskoi-federatsii-razvitie-fizicheskoi/ |
+| za.infokiller[0].a | Только план замеров | + цель Указа 309; ВОЗ: ~$300 млрд расходов здравоохранения за 2020–2030 | https://www.who.int/news-room/fact-sheets/detail/physical-activity |
+| protiv.theses[0].primer | «от массового разряда» | «от юношеского разряда» | https://www.consultant.ru/document/cons_doc_LAW_283736/7310947eabee36678c6a21c2a694494039888e4a/ |
+| protiv.theses[1].pochemu/primer | ДЮСШ | Спортшколы (СШ, СШОР) готовят спортивный резерв | https://legalacts.ru/doc/federalnyi-zakon-ot-30042021-n-127-fz-o-vnesenii-izmenenii/ |
+| protiv.theses[2] | Внебюджетные деньги идут к вершине (слабый) | Государство держит обе цели: 70% и тройка Олимпиады к 2030 | https://legalacts.ru/doc/pasport-gosudarstvennoi-programmy-kompleksnoi-programmy-rossiiskoi-federatsii-razvitie-fizicheskoi/ |
+| protiv.attacks[0] | ГТО и «Спорт — норма жизни» (мимо, устарело) | Указ 309 про больничные, медали не запрещает | там же |
+| protiv.attacks[2] | Прогноз о снятии отстранения | Рекомендации ВОЗ выполнимы без бюджета, нужен пример | — |
+| protiv.expect[1].a | Площадки — только регионы/муниципалитеты | В основном регионы и муниципалитеты, федбюджет софинансирует | https://ppt.ru/amp/obzory/vstupaet-v-silu/postanovlenie-pravitelstva-rf-13-dekabrya-2024-g-n-1773 |
+| arsenal.stats[1] | Указ 309: 70% к 2030 (✗) | Паспорт госпрограммы (2021): 70% занимающихся и тройка лидеров Олимпиады к 2030 | https://legalacts.ru/doc/pasport-gosudarstvennoi-programmy-kompleksnoi-programmy-rossiiskoi-federatsii-razvitie-fizicheskoi/ |
+| verdict.why | «цель государства» | Связь спорта со здоровьем в Указе 309; у ПРОТИВ — двойная цель госпрограммы | — |
+| arsenal.quote.url | «не открывается» | Без изменений: ссылка открылась, текст ст. 41 ч. 2 совпадает | https://www.consultant.ru/document/cons_doc_LAW_28399/8c815f376c72a61b3df7905bb5aae9f144d2cb0d/ |
