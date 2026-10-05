@@ -26,3 +26,18 @@
 | protiv.theses[0].primer | ИТ-ипотека (с 2022) | ИТ-ипотека (с 2022, с 2024 — до 6%) | те же |
 | za.infokiller[1].a | Только теория самодетерминации | + Герцберг опрашивал около 200 инженеров и бухгалтеров, не заводских | https://www.businessballs.com/improving-workplace-performance/frederick-herzberg-motivation-theory/ |
 | arsenal.quote.url | нет | добавлен URL ВОЗ | https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases |
+
+## Повторная проверка
+| Путь в JSON | Новое утверждение | Вердикт | Источник (URL) | Действие |
+|---|---|---|---|---|
+| za.attacks[2] | ВОЗ: выгорание — от неуправляемого хронического стресса на работе; про команду — наш вывод | ✓ | https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases | — |
+| arsenal.stats[1] | С 2022; в 2026 — до 6%, до 9 млн, без Москвы и Петербурга | ⚠→✓ | https://finance.mail.ru/article/usloviya-it-ipoteki-68259356/ (26.01.2026: 6%, 9 млн, не Москва/СПб); https://www.pnp.ru/social/it-ipoteku-prodlili-do-2030-goda-i-povysili-predelnuyu-stavku-po-ney-do-6.html (с 08.2024, запуск 2022) | На странице РБК только про 6% для «Сколково», нет 9 млн и Москвы/СПб — URL и source заменены на Mail.ru |
+| protiv.theses[0].primer | ИТ-ипотека (с 2022, с 2024 — до 6%) | ✓ | pnp.ru (см. выше) | — |
+| za.infokiller[1].a | Герцберг опрашивал около 200 инженеров и бухгалтеров | ✓ | https://www.businessballs.com/improving-workplace-performance/frederick-herzberg-motivation-theory/ («1959 research … among 200 engineers and accountants») | — |
+| arsenal.quote.url | URL ВОЗ, цитата дословно | ✓ | URL ВОЗ выше | — |
+
+validate_card.py: OK, 0 замечаний.
+
+ГОТОВО
+- что изменилось: za.attacks[2] — убрано приписанное ВОЗ «а не с окладом»; ИТ-ипотека обновлена до условий 2026 (до 6%, 9 млн, без Москвы/СПб), источник stats[1] заменён на Mail.ru 26.01.2026 (РБК не содержал 9 млн и Москву/СПб).
+- В ответ на «Герцберг про заводы» добавлено: опрос ~200 инженеров и бухгалтеров; у цитаты ВОЗ появился URL. Остальные факты карточки ✓.
