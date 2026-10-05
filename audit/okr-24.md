@@ -28,3 +28,25 @@ EPMC = Europe PMC REST (тот же PMID; pubmed.ncbi.nlm.nih.gov не откр�
 - Рискованно вслух: «число придумал маркетинг» без «вероятно»; «ему нужны врач» (za.expect[1]) — звучит как диагноз тревожным; trap[2] про подростков с РПП — говорить осторожно, без медицинских советов; «4400 шагов снижали смертность» — говорить «связаны с меньшей смертностью».
 
 ## Итого: ошибок 2 (✗ 0, ⚠ 2, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| za.infokiller[0].a; za.attacks[1]; za.ask[1] | «Массовых данных нет», «долю не знаете» | Опрос 2024, 523 чел.: ортосомния у 3–14% — меньшинство | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=orthosomnia%20AND%20JOURNAL:%22Brain%20Sci%22&resultType=core&format=json (Jahrami 2024, PMID 39595886) |
+| protiv.expect[0].a; protiv.infokiller[1].a; traps[1].exit | «Долю не знаю», «массовых цифр не назову» | 3–14% в опросе 2024 | то же |
+| protiv.infokiller[2].a | Ответ про похудение (IDEA) на вопрос о сне | Данные сна кормят ортосомнию: 3–14% (Jahrami 2024) | то же |
+| protiv.theses[2].pochemu/primer | «Число придумал маркетинг» | «Число, вероятно, из рекламы шагомера»; «Манпо-кэй», 1965 | https://whish.stanford.edu/wp-content/uploads/2019/10/Step-Volume-Intensity-Mortality_JAMA-IntMedicine-2019-.pdf |
+| za.attacks[2]; za.infokiller[1].a | «10 000 — реклама» | «10 000, вероятно, из рекламы» | то же |
+| za.theses[0].primer; za.infokiller[1].a | 4400 шагов «снижали смертность» | «связаны с меньшей смертностью» / «смертность ниже» | то же |
+| za.theses[1].primer; za.infokiller[2].a | Паузу ставят серии: болезнь, поездка | Кольца ставят на паузу, серия наград не сгорает | https://www.apple.com/newsroom/2024/06/watchos-11-brings-powerful-health-and-fitness-insights/ |
+| za.theses[2] (слабый) | Каркас привычки, Лалли 66 дней | Даже сняв трекер, двигаются больше: к году носили 10%, +37 мин/нед к контролю | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:27717766&resultType=core&format=json ; https://www.healio.com/news/endocrinology/20161006/activity-trackers-fail-to-improve-health-outcomes-with-or-without-incentives |
+| za.expect[2].a | Лалли: 66 дней | Сингапур: 10% носили, +37 мин/нед | то же |
+| protiv.theses[0] (слабый) | После отмены денег эффект не удержался | Трекер бросают (к году 10%), здоровье не меняется ни в одной группе | то же |
+| protiv.attacks[0]; za.attacks[0] | Атаки на старые тезисы (деньги / Лалли) | +37 мин — меньший спад, здоровье не улучшилось; здоровье не сдвинул никто, но +37 мин | то же |
+| protiv.expect[1].a | Связь с РПП у студентов | Назван источник: Симпсон и Маццео 2017, 493 студента | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:%22fitness%20tracking%20technology%22%20AND%20AUTH:Simpson&resultType=core&format=json |
+| za.expect[1].a | «Ему нужны врач и пауза» | «Ему помогут пауза и отключённые цели» | — (тон) |
+| traps[2].exit | «Цели убирают родитель и врач» | «Уязвимым подсчёт может вредить, цели лучше отключить» | — (тон) |
+| arsenal.stats[1] | Ли 2019, плато ~7500 (устарело) | Ding 2025: 7000 vs 2000 шагов — риск смерти ниже на 47%, перегиб 5000–7000 | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:40713949&resultType=core&format=json (DOI 10.1016/S2468-2667(25)00164-1) |
+| arsenal.quote.author | Стратерн 1997, Гудхарт 1975 | Стратерн (1997) вслед за Хоскином | https://en.wikipedia.org/wiki/Goodhart%27s_law |
+
+Валидатор: 0 замечаний.
