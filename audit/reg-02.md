@@ -17,3 +17,12 @@
 Рискованно вслух: ЗА опирается на Герцберга, а у него карьерный рост — мотиватор; ПРОТИВ может развернуть: «по вашему же Герцбергу перспективы — мотиватор». ЗА: признать и делать упор на «зарплата — гигиена».
 
 ## Итого: ошибок 2 (✗ 0, ⚠ 2, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| za.attacks[2] | ВОЗ связывает выгорание со стрессом, «а не с размером оклада» | ВОЗ: выгорание — от неуправляемого хронического стресса на работе; вывод про команду — отдельно, от нас | https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases |
+| arsenal.stats[1] | ИТ-ипотека под 5% запущена в 2022 (Хабр) | С 2022; в 2026-м — до 6%, до 9 млн руб., без Москвы и Петербурга; year 2026 | https://realty.rbc.ru/news/69b2cf1b9a794758af2acf56 (2026, Минцифры); https://www.pnp.ru/social/it-ipoteku-prodlili-do-2030-goda-i-povysili-predelnuyu-stavku-po-ney-do-6.html (с августа 2024: 6%, 9 млн, до 2030) |
+| protiv.theses[0].primer | ИТ-ипотека (с 2022) | ИТ-ипотека (с 2022, с 2024 — до 6%) | те же |
+| za.infokiller[1].a | Только теория самодетерминации | + Герцберг опрашивал около 200 инженеров и бухгалтеров, не заводских | https://www.businessballs.com/improving-workplace-performance/frederick-herzberg-motivation-theory/ |
+| arsenal.quote.url | нет | добавлен URL ВОЗ | https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases |
