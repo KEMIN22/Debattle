@@ -23,3 +23,20 @@
 - Рискованно вслух: содержание звука Тралалело (оскорбление религии) — не пересказывать, только «оскорбительный текст»; «обезьяньи звуки» у Кинга — подавать как «расистские стереотипы», без смакования; пример с дипфейком Путина — политика, лишний, убрать; ст. 152.1 — с оговоркой «по общему правилу».
 
 ## Итого: ошибок 4 (✗ 0, ⚠ 4, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| arsenal.stats[0].url/source/fact | AOL (404), «по пересказу AOL» | Kapwing, AI Slop Report; «доли пересекаются» | https://www.kapwing.com/blog/ai-slop-report-the-global-rise-of-low-quality-ai-videos/ |
+| arsenal.quote.author/url | Instagram, октябрь 2025 | соцсети, 7 октября 2025; url добавлен | https://www.complex.com/life/a/jaelaniturnerwilliams/mlks-daughter-says-i-concur-after-zelda-williams-calls-out-ai-creators |
+| za.infokiller[2]; traps[0].problem | Sora закрыта в марте 2026 из-за затрат | В марте 2026 OpenAI объявила о закрытии; причина — фокус и вычисления | https://engadget.com/ai/openai-is-shutting-down-its-sora-video-generation-app-211023358.html |
+| za.theses[2] | Слабый: «без автора — некого привлечь» (Тралалело) | «Фабрика — экономика: платят за просмотры»; 278 каналов, ~117 млн долл./год по оценке | https://www.dailydot.com/news/youtube-ai-slop-study/ |
+| za.attacks[1] | «мем одноразов» + 278 каналов (под старый тезис ПРОТИВ №2) | Steal a Brainrot продаёт лучшие предметы за деньги — монетизация | https://en.wikipedia.org/wiki/Steal_a_Brainrot (Polygon) |
+| za.theses[1].primer; za.attacks[2] | «обезьяньи звуки» | «расистские стереотипы» | — (риск вслух) |
+| za.expect[1].a | — | Добавлено «удержание — не просьба» | — (дыра из Логики) |
+| protiv.theses[1] | Слабый: Nyan Cat, 2011 | «Спрос виден по тому, что люди строят на меме»; Steal a Brainrot — первой 25+ млн одновременно | https://en.wikipedia.org/wiki/Steal_a_Brainrot |
+| protiv.theses[2].primer | Sora приостановила | OpenAI приостановила | https://afrotech.com/openai-pauses-generations-martin-luther-king-jr |
+| protiv.attacks[0] | «Сотни аккаунтов — без источника» (мимо) | Атака на новый тезис ЗА №3: просмотры дают люди, Тралалело начал пользователь | https://en.wikipedia.org/wiki/Italian_brainrot |
+| protiv.attacks[2] | «Обращение Путина» 2023 (политика, мимо) | Kapwing — один аккаунт и весь ИИ-слоп; лента крутит чужой спрос (по тезису ЗА №1) | https://www.kapwing.com/blog/ai-slop-report-the-global-rise-of-low-quality-ai-videos/ |
+| protiv.infokiller[0].a | Только подделки людей | + оскорбительные тексты — их держат правила площадок и закон | — (дыра из Логики) |
+| protiv.infokiller[2].a | Ст. 152.1 — только с согласия | «по общему правилу» | https://www.garant.ru/article/1284159/ |
