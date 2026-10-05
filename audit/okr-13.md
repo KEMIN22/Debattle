@@ -22,3 +22,20 @@
 - Рискованно вслух: «Кто вернёт 38-летней потерянные годы», «ошибка по возрасту необратима» — звучит как давление на женщин, судьи могут счесть некорректным. «ЭКО по ОМС лечит последствия возраста» — легко опровергнуть (ОМС лечит бесплодие по показаниям). «Росстат, 2022» — неверная атрибуция, соперник проверит. Не уходить в демографию и призывы властей рожать (protiv.infokiller[2] — держаться формулировки «спор об оптимуме для ребёнка»).
 
 ## Итого: ошибок 4 (✗ 0, ⚠ 4, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| arsenal.stats[0] | 1/1250 в 25, 1/350–400 в 35, 1/100 в 40; gfmer, год пуст | 1/1250 в 25, 1/400 в 35, 1/100 в 40; Univ. of Alabama (GLOWM), 2009 | https://glowm.com/resources/glowm_www4/presentations/MEP-Pub7946-The%20Fundamentals%20of%20Preconception%20Care-CC%20BY%20SA/Premodule%20File/age.htm |
+| arsenal.stats[1] | «Росстат, 2022» | Минтруд (О. Баталина), март 2025, по ТАСС (вторичный), year 2025 | https://expert.ru/news/v-mintrude-nazvali-sredniy-vozrast-zhenshchin-pri-rozhdenii-pervogo-rebenka |
+| protiv.theses[0].primer | «Росстат, 2022: … около 26» | «Минтруд, 2025: … около 26 лет» | то же |
+| protiv.theses[0].pochemu; protiv.expect[0].a; protiv.infokiller[1].a; verdict.why | риск выше до 18; окно 18–35 | до 20; окно 20–35 | https://www.who.int/news-room/fact-sheets/detail/adolescent-pregnancy |
+| protiv.infokiller[0].a | «Точных цифр не назову»; окно 18–35 | в 40 около 1 к 100, 99 из 100 без синдрома; окно 20–35 | GLOWM (см. выше) |
+| arsenal.quote.url | нет | добавлен url (вторичный) | https://rulaws.ru/amp/Semeynyy-kodeks/Razdel-IV/Glava-12/Statya-63/ |
+| za.theses[1].pochemu/primer | «свои клетки после 40…»; «ОМС лечит последствия возраста» | только про заморозку до 35; «ОМС лечит бесплодие, возраст яйцеклетки не меняет» | https://hfea.gov.uk/about-us/news-and-press-releases/2018/press-release-age-is-the-key-factor-for-egg-freezing-success-says-new-hfea-report-as-overall-treatment-numbers-remain-low/ |
+| za.theses[2] | окно для 2-го и 3-го ребёнка (слабый) | ЭКО не отменяет возраст: до 35 — 31% родов на перенос, после 40 своими клетками — 10% (HFEA, 2018) | https://www.hfea.gov.uk/about-us/news-and-press-releases/2020/2018-trends-in-fertility-treatment/ |
+| protiv.attacks[2] | «третий ребёнок в 39 — про размер семьи» | «ЭКО после 40 — крайний случай, спор про оптимум внутри окна» | — |
+| protiv.theses[2] | «возраст — один из факторов» (слабый) | порог 35 условен (риск амниоцентеза = риск аномалии); скрининг снял тревогу; GLOWM 2009 | GLOWM (см. выше) |
+| za.attacks[0]; za.expect[0] | ответ на «скрининг не только возраст» | «скрининг снимает тревогу, не риск: в 40 вчетверо выше, чем в 35»; ответ на «порог произволен» | GLOWM (см. выше) |
+| za.ask[1]; za.infokiller[0].a | «кто вернёт 38-летней годы»; «ошибка необратима» (рискованно) | «готовность в 40 вернёт шансы ЭКО до 35?»; «возраст яйцеклетки назад не отмотать» | — |
+| za.infokiller[2].a | «решает человек» (уступка) | решение за человеком, но биология задаёт верхнюю границу, готовность — как успеть до неё | — |
