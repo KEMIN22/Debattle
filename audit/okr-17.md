@@ -54,3 +54,23 @@
 | arsenal.quote | пусто, verified:false | дословно ст. 64 ч. 1, verified:true | https://legalacts.ru/kodeks/TK-RF/chast-iii/razdel-iii/glava-11/statja-64/ |
 | traps[1].exit | «лицензируемые профессии» | врач и педагог — допуск по закону | — |
 | verdict.why | Школа 21 | Пленум + IBM, без Школы 21 | — |
+
+## Повторная проверка
+| # | Где (путь в JSON) | Утверждение (кратко) | Вердикт | Источник (URL) | Что исправлено/замечание |
+|---|---|---|---|---|---|
+| R1 | za.theses[1].primer | IBM: 95% вакансий с дипломом → к 2021 меньше половины | ✓ | https://fortune.com/2022/10/11/ibm-ceo-downplays-college-degree-importance-hiring-jobs/ («As of January 2021, less than half do») | — |
+| R2 | za.theses[2] | Главбух ПАО: любое высшее; без профильного стаж 5 из 7 (402-ФЗ) | ✓ | https://rulaws.ru/laws/Federalnyy-zakon-ot-06.12.2011-N-402-FZ/Statya-7/ (ч. 4) | Логика: тезис признаёт, что высшее всё равно обязательно, — ПРОТИВ ответит «закон за диплом». Держать акцент на «профиль не важен, важен стаж». |
+| R3 | za.attacks[0]; traps[1].exit; za.infokiller[0].a | Врач, педагог — допуск по закону; Пленум разрешает, не обязывает | ✓ | https://www.consultant.ru/document/cons_doc_LAW_421840/b004fed0b70d0f223e4a81f8ad6cd92af90a7e3b/ (323-ФЗ ст. 69 ч. 1); https://rulaws.ru/laws/Federalnyy-zakon-ot-29.12.2012-N-273-FZ/Statya-46/ (ч. 1) | — |
+| R4 | za.attacks[2]; protiv.theses[1].primer | Реестр подтверждает выдачу; части дипломов нет → запрос в вуз | ✓ | https://t-j.ru/reestr-diplomov/ (2024: найдено 4 из 5 настоящих) | Атака теперь бьёт по тезису ПРОТИВ №2 |
+| R5 | protiv.theses[0] tezis/pochemu; protiv.attacks[2]; verdict.why | Пленум ВС № 2, п. 10: уровень образования — деловое качество, отказ обоснован | ✓ | https://legalacts.ru/doc/Postanovlenie-Plenuma-VS-RF--N-2-ot-17-marta-2004-g-O-primenenii-sudami-Rossijskoj-Federacii-Trudovogo-kodeksa-Rossijskoj-Federacii/ | — |
+| R6 | protiv.theses[0].primer | ТК ст. 70: выпускнику «в первый год по специальности» без испытания | ⚠→✓ | https://legalacts.ru/kodeks/TK-RF/chast-iii/razdel-iii/glava-11/statja-70/ (ч. 4: «впервые поступающих на работу по полученной специальности в течение одного года») | Исправлено: «впервые нанятому по специальности в течение года» |
+| R7 | protiv.theses[2].primer | Январь 2023, британская Schwa, ChatGPT прошёл на собеседование | ✓ | https://fortune.com/2023/01/18/chatgpt-ai-applied-for-job-shortlisted-for-interview | Помнить: боту нужна была «существенная помощь» |
+| R8 | arsenal.stats[1] | ФИС ФРДО, ПП РФ № 825, 2021; иным лицам — подтверждение наличия сведений | ✓ | https://obrnadzor.gov.ru/gosudarstvennye-uslugi-i-funkczii/7701537808-gosfunction/formirovanie-i-vedenie-federalnogo-reestra-svedenij-o-dokumentah-ob-obrazovanii-i-ili-o-kvalifikaczii-dokumentah-ob-obuchenii/ | — |
+| R9 | arsenal.quote | ТК ст. 64 ч. 1 дословно | ✓ | https://legalacts.ru/kodeks/TK-RF/chast-iii/razdel-iii/glava-11/statja-64/ | — |
+| R10 | za.expect[0].a; protiv.theses[1].tezis; protiv.expect[1].a; protiv.infokiller[0–1].a | Новые формулировки без фактов | ✓ логика/стиль | — | «Единственный», «единая планка», «откат» убраны; длины в норме |
+
+Итого повторной проверки: ошибок 1 (✗ 0, ⚠ 1 — исправлено, ? 0). validate_card.py: OK, 0 замечаний.
+
+ГОТОВО
+- что изменилось: все правки fixer подтверждены по страницам (IBM, 402-ФЗ, Пленум № 2 п. 10, ФРДО/ПП 825, ТК ст. 64, Schwa).
+- protiv.theses[0].primer уточнён по ТК ст. 70 ч. 4 («впервые нанятому по специальности в течение года»).
