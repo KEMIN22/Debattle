@@ -10,3 +10,14 @@
 | 4 | za.attacks[2]; za.infokiller[1].a; protiv.theses[2]; protiv.theses[2].primer | «Ст. 43 гарантирует бесплатную школу / бесплатное образование в государственных школах» | ⚠ | тот же URL consultant.ru | Неточность: ч. 2 ст. 43 гарантирует бесплатность только основного общего образования (9 классов), а не всей школы. Бесплатность среднего общего гарантирует ст. 5 ч. 3 закона 273-ФЗ. Формулировки «в государственных или муниципальных» и «основное общее» вслух не путать. ЗА может дополнительно сослаться на ч. 5 ст. 43: РФ «поддерживает различные формы образования» |
 
 ## Итого: ошибок 2 (✗ 0, ⚠ 2, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| arsenal.quote.url | PDF на школьном сайте | consultant.ru, ст. 43 Конституции | https://www.consultant.ru/document/cons_doc_LAW_28399/8452df644dd1f63f07ca7744f87beddac2947282/ |
+| za.attacks[2] | «Ст. 43 гарантирует бесплатную школу» | «Ст. 5 закона 273-ФЗ гарантирует бесплатную школу» | https://www.consultant.ru/document/cons_doc_LAW_540409/e185d59b595b6bf58b8716c9d5129a3dd5b7630a/ |
+| za.infokiller[1].a | «ст. 43 гарантирует бесплатное образование в государственных школах» | «ст. 5 закона 273-ФЗ гарантирует бесплатную школу до 11 класса» | https://www.consultant.ru/document/cons_doc_LAW_540409/e185d59b595b6bf58b8716c9d5129a3dd5b7630a/ |
+| protiv.theses[2].tezis | «Конституция гарантирует общедоступное бесплатное образование» | «Конституция и закон гарантируют бесплатную школу» | https://www.consultant.ru/document/cons_doc_LAW_28399/8452df644dd1f63f07ca7744f87beddac2947282/; https://www.consultant.ru/document/cons_doc_LAW_540409/e185d59b595b6bf58b8716c9d5129a3dd5b7630a/ |
+| protiv.theses[2].primer | «Ст. 43: бесплатное образование в государственных школах» | «Ст. 43: бесплатное основное общее; ст. 5 273-ФЗ: бесплатное до 11 класса» | https://www.consultant.ru/document/cons_doc_LAW_28399/8452df644dd1f63f07ca7744f87beddac2947282/; https://www.consultant.ru/document/cons_doc_LAW_540409/e185d59b595b6bf58b8716c9d5129a3dd5b7630a/ |
+| arsenal.stats[0].fact, source | «вдвое больше»; источник без пометки | «более чем вдвое»; «(вторичный источник)» | https://finance.mail.ru/article/rusprofile-vyiruchka-top-10-chastnyih-shkol-rossii-v-2025-godu-vyirosla-na-16-69212559/ |
+| arsenal.stats[1].fact, source | «топ-10 частных школ… превысила 10 млрд» | «топ-10 частных образовательных организаций… в среднем на 16%, до 10,05 млрд»; «(вторичный источник)» | https://finance.mail.ru/article/rusprofile-vyiruchka-top-10-chastnyih-shkol-rossii-v-2025-godu-vyirosla-na-16-69212559/ |
