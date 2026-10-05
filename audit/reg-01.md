@@ -20,3 +20,17 @@
 | arsenal.stats[1].url, source | culture.ru (не открывается) | aif.ru, «(вторичный источник)» | https://aif.ru/society/education/chto_takoe_pushkinskaya_karta_i_kto_eyu_mozhet_vospolzovatsya |
 | arsenal.stats[0].source | «(по данным ComNews)» | «ComNews (вторичный источник)» | https://www.comnews.ru/content/229141/2023-10-02/2023-w40/1008/roskomnadzor-proverit-vladelcev-saytov-i-prilozheniy-ispolzovanie-rekomendatelnykh-algoritmov |
 | arsenal.quote.url | нет | добавлен URL | https://quoteinvestigator.com/2022/08/11/medium-message/ |
+
+## Повторная проверка
+| # | Где (путь в JSON) | Утверждение (кратко) | Вердикт | Источник (URL) | Что исправить |
+|---|---|---|---|---|---|
+| 1 | protiv.theses[1].primer | Вступления 20→5 с (1986–2015), «предположил влияние стриминга» | ✓ (на странице: «more than 20 seconds… average 5 seconds», top-10 1986–2015, стриминг «might be» причиной) | https://news.osu.edu/has-music-streaming-killed-the-instrumental-intro/ | — |
+| 2 | arsenal.stats[1].url, source | Пушкинская карта с 1.09.2021, 14–22 года; АиФ (вторичный) | ✓ (страница открылась, обе цифры есть) | https://aif.ru/society/education/chto_takoe_pushkinskaya_karta_i_kto_eyu_mozhet_vospolzovatsya | — |
+| 3 | arsenal.stats[0].source | 408-ФЗ в силе с 1.10.2023; ComNews (вторичный) | ✓ | https://www.comnews.ru/content/229141/2023-10-02/2023-w40/1008/roskomnadzor-proverit-vladelcev-saytov-i-prilozheniy-ispolzovanie-rekomendatelnykh-algoritmov | — |
+| 4 | arsenal.quote.url | «The medium is the message», Understanding Media, 1964, гл. 1 | ✓ (URL открывается, глава 1 названа так) | https://quoteinvestigator.com/2022/08/11/medium-message/ | — |
+
+validate_card.py: OK, 0 замечаний. Мои правки в карточку: нет.
+
+ГОТОВО
+- что изменилось: исходный аудит — 1 ⚠ (Léveillé Gauvin лишь предположил роль стриминга); fixer заменил формулировку в protiv.theses[1].primer, перевёл Пушкинскую карту на рабочий URL aif.ru, пометил ComNews/АиФ как вторичные, добавил URL к цитате Маклюэна.
+- Повторная проверка: все 4 правки ✓, ошибок не осталось.
