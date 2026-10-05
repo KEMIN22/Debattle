@@ -200,7 +200,7 @@ function factHtml(f){
 function arsenalHtml(a){
  if(!a)return '<div class="empty">нет данных</div>';
  var o='<div class="lb">Статистика</div>'+(a.stats||[]).map(factHtml).join('');
- if(a.quote){var q=a.quote,v=q.verified===true;o+='<div class="lb">Цитата</div><div class="it'+(v?'':' unv')+'">«'+h(q.text)+'» — '+h(q.author)+(v?' <span class="tag" style="background:var(--ok);color:#000">проверено</span>':' <span class="tag">не проверено</span>')+'</div>'}
+ if(a.quote&&a.quote.text&&String(a.quote.text).trim()){var q=a.quote,v=q.verified===true;o+='<div class="lb">Цитата</div><div class="it'+(v?'':' unv')+'">«'+h(q.text)+'» — '+h(q.author)+(v?' <span class="tag" style="background:var(--ok);color:#000">проверено</span>':' <span class="tag">не проверено</span>')+'</div>'}
  if(a.life)o+='<div class="lb">Личный опыт</div><div class="it">'+h(a.life)+'</div>';
  return o;
 }
