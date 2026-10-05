@@ -14,3 +14,15 @@
 | 9 | za.expect[1].a | Сегодня молодые ждут сразу высокой оплаты | ✓ (как оценка работодателей) | https://expert.ru/news/vtsiom-rasskazal-kak-prokhodit-trudoustroystvo-molodezhi-v-sovremennoy-rossii (опрос Kept, дек. 2024: 88% работодателей отмечают высокие требования поколения Z к вознаграждению) | Можно добавить как пример с источником |
 
 ## Итого: ошибок 6 (✗ 2, ⚠ 4, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| arsenal.stats[0] | 2,2%, «минимум за период наблюдений», декабрь 2,2%; источник Moscow Times (иноагент) | 2,2% в 2025, минимум за 2017–2025; Росстат через Statbase (вторичный) | https://statbase.ru/data/rus-unemployment-rate-by-region-national-stat/ |
+| za.theses[0].primer | Заводы ищут токарей и сварщиков, рабочие профессии выбирают неохотно | 2025: почти четверть вакансий — рабочие, 2,3 млн (hh.ru), дефицит держится | https://rg.ru/2026/01/12/issledovanie-kazhdaia-chetvertaia-vakansiia-v-rossii-dlia-rabochih-specialnostej.html |
+| za.theses[1].primer | Ритейл: высокая текучесть, молодые чаще планируют уйти | ВЦИОМ, 2025: 33% молодёжи настроены быстро менять работу | https://expert.ru/news/vtsiom-rasskazal-kak-prokhodit-trudoustroystvo-molodezhi-v-sovremennoy-rossii |
+| za.infokiller[0].a | «рабочие профессии выбирают неохотно» | Рабочих вакансий 2,3 млн за 2025, самозанятость растёт | https://rg.ru/2026/01/12/issledovanie-kazhdaia-chetvertaia-vakansiia-v-rossii-dlia-rabochih-specialnostej.html |
+| protiv.theses[1].primer | Рабочие уходят в доставку (без даты) | 2024: Минпромторг — 1,5 млн курьеров оттягивают рабочих с производств | https://rtvi.com/news/v-minpromtorge-zayavili-o-riskah-dlya-rossijskoj-ekonomiki-iz-za-kurerov/ |
+| protiv.attacks[0] | Колледжи недобирают (неверно) | Рабочие вакансии — четверть рынка, а дефицит держится | https://rg.ru/2026/01/12/issledovanie-kazhdaia-chetvertaia-vakansiia-v-rossii-dlia-rabochih-specialnostej.html |
+| protiv.expect[0].a | Зарплаты растут не там, где дефицит | Зарплаты в производстве +17%, курьеры возвращаются на заводы (2025) | https://vfokuse.mail.ru/articles/65224466-kureryi-massovo-uhodyat-na-zavodyi/ |
+| traps[2].exit | Только безработица и самозанятые | Только цифры с источником: безработица, самозанятые, вакансии hh.ru | — (согласование с новыми примерами) |
