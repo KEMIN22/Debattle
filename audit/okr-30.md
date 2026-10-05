@@ -23,3 +23,20 @@
 - **Рискованно вслух.** «По ГК животное — имущество» — неточно, а «п. 2» опровергнут текстом статьи (факт №7). «Ребёнка не усыпляют» — тема эвтаназии эмоциональна, произносить бережно, без примеров про детей. «Закон требует прививку» — называть приказ Минсельхоза № 705, а не 498-ФЗ. Не высмеивать хозяев с колясками: в зале и среди судей могут быть такие.
 
 ## Итого: ошибок 5 (✗ 0, ⚠ 5, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| arsenal.stats[0].url | kontur (404) | consultant.ru, ст. 9 498-ФЗ | https://consultant.ru/document/cons_doc_LAW_314646/b2d155e355a125bbe89726402f1c374dcdd762f4/ |
+| arsenal.stats[1].fact | опрос владельцев собак и кошек | опрос 563 владельцев; упитанность по оценке хозяев | https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7922876/fullTextXML |
+| za.theses[1] | «как члену семьи» = прививки, лечение; 498-ФЗ и прививка | чувствующее существо — основа закона; ст. 4 498-ФЗ | https://consultant.ru/document/cons_doc_LAW_314646/5563dda51dc0a9cb02c54fa681f63167406e52d4/ |
+| protiv.attacks[1] | закон требует ухода; «член семьи» за пределами | закон защищает от страданий, ребёнком не делает | (под новый З2) |
+| za.expect[0] | ГК: животное — имущество; «п. 2» | правила об имуществе, если закон не установил иное; абз. 2 ст. 137 | https://www.zakonrf.info/gk/137/ |
+| za.expect[2].a | траты «сокращают брошенных» | ст. 9 498-ФЗ: меры против нежелательного потомства | https://consultant.ru/document/cons_doc_LAW_314646/b2d155e355a125bbe89726402f1c374dcdd762f4/ |
+| protiv.theses[0] | «как к ребёнку» → еда (Coy) | мода на «детские мордочки»: мопсы 1,9×, BOAS 54× (RVC, 2022) | https://www.vettimes.com/news/vets/small-animal-vets/pug-health-risks-mean-it-can-no-longer-be-considered-typical-dog |
+| za.attacks[0] | Coy: связь, не причина | селекция, а не коляска; лечить мопса — забота | (под новый П1) |
+| za.attacks[2] | торт без вреда; доказательств нет | + «радость хозяина — не порок» | (логика аудита) |
+| protiv.theses[1].pochemu/primer | «ребёнка не усыпляют»; «барьер» | «члена семьи» отпустить тяжелее; решение мучительно | https://www.dvm360.com/view/end-prepare-highly-attached-clients-face-their-pets-death |
+| protiv.infokiller[2].a | «ветеринары это обсуждают» | привязанность делает выбор мучительным | https://www.dvm360.com/view/end-prepare-highly-attached-clients-face-their-pets-death |
+| protiv.infokiller[1].a | Coy: лакомства и вес | мопсы: BOAS в 54 раза чаще (RVC, 2022) | https://www.vettimes.com/news/vets/small-animal-vets/pug-health-risks-mean-it-can-no-longer-be-considered-typical-dog |
+| verdict.why | «опрос Coy — связь, не причина» | довод о мопсах бьёт по моде на породу | — |
