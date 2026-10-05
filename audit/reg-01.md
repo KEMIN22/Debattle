@@ -12,3 +12,11 @@
 Рискованно вслух: «Слово пацана» — спорный сериал (критика за романтизацию группировок), и его активно продвигал сам Wink: ПРОТИВ легко повернёт пример в пользу «выбрала платформа».
 
 ## Итого: ошибок 1 (✗ 0, ⚠ 1, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| protiv.theses[1].primer | «исследователь связал это со стримингом» | «исследователь предположил влияние стриминга» | https://news.osu.edu/has-music-streaming-killed-the-instrumental-intro/ |
+| arsenal.stats[1].url, source | culture.ru (не открывается) | aif.ru, «(вторичный источник)» | https://aif.ru/society/education/chto_takoe_pushkinskaya_karta_i_kto_eyu_mozhet_vospolzovatsya |
+| arsenal.stats[0].source | «(по данным ComNews)» | «ComNews (вторичный источник)» | https://www.comnews.ru/content/229141/2023-10-02/2023-w40/1008/roskomnadzor-proverit-vladelcev-saytov-i-prilozheniy-ispolzovanie-rekomendatelnykh-algoritmov |
+| arsenal.quote.url | нет | добавлен URL | https://quoteinvestigator.com/2022/08/11/medium-message/ |

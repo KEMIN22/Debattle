@@ -70,7 +70,7 @@
       {
         "tezis": "Платформа меняет само искусство: авторы пишут под метрики удержания.",
         "pochemu": "Роялти на Spotify идут за прослушивание дольше 30 секунд, поэтому первые секунды решают.",
-        "primer": "Вступления хитов сократились с 20 до 5 секунд (1986-2015): исследователь связал это со стримингом."
+        "primer": "Вступления хитов сократились с 20 до 5 секунд (1986-2015): исследователь предположил влияние стриминга."
       },
       {
         "tezis": "Правила подборки закрыты: зритель не знает, почему ему показали именно это.",
@@ -122,23 +122,24 @@
     "stats": [
       {
         "fact": "Закон № 408-ФЗ о рекомендательных технологиях вступил в силу 1 октября 2023 года.",
-        "source": "ФЗ от 31.07.2023 № 408-ФЗ (по данным ComNews)",
+        "source": "ФЗ от 31.07.2023 № 408-ФЗ, ComNews (вторичный источник)",
         "year": 2023,
         "url": "https://www.comnews.ru/content/229141/2023-10-02/2023-w40/1008/roskomnadzor-proverit-vladelcev-saytov-i-prilozheniy-ispolzovanie-rekomendatelnykh-algoritmov",
         "verified": true
       },
       {
         "fact": "Пушкинская карта запущена 1 сентября 2021 года для молодёжи 14-22 лет.",
-        "source": "Проект «Пушкинская карта» (culture.ru)",
+        "source": "Проект «Пушкинская карта», АиФ (вторичный источник)",
         "year": 2021,
-        "url": "https://www.culture.ru/events/1644444/pushkinskaya-karta",
+        "url": "https://aif.ru/society/education/chto_takoe_pushkinskaya_karta_i_kto_eyu_mozhet_vospolzovatsya",
         "verified": true
       }
     ],
     "quote": {
       "text": "The medium is the message.",
       "author": "Маршалл Маклюэн, Understanding Media, 1964, гл. 1 (оригинал, англ.)",
-      "verified": true
+      "verified": true,
+      "url": "https://quoteinvestigator.com/2022/08/11/medium-message/"
     },
     "life": "Вспомни, как сам нашёл любимого исполнителя или сериал: подсказала лента или друг."
   },
