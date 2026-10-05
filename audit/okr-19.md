@@ -34,3 +34,21 @@
 | protiv.infokiller[0].a | «российских цифр не назову» | «прямых данных нет; но 84% vs 48%» | https://wciom.ru/analytical-reviews/analiticheskii-obzor/vse-idet-po-planu |
 | protiv.infokiller[2].a | «условия смягчились, горизонт короткий» | рост 2024 — средний по стране, молодым возврат не гарантирует | https://wciom.ru/analytical-reviews/analiticheskii-obzor/vse-idet-po-planu |
 | verdict.why | «ПРОТИВ признал, что цифр нет» | ЗА: долгие планы вернулись; ПРОТИВ не доказал утрату у молодых | — |
+
+## Повторная проверка
+| # | Путь в JSON | Что проверено | Вердикт | Источник (URL) | Комментарий |
+|---|---|---|---|---|---|
+| 1 | arsenal.stats[0] | url/source: «Квартира, автомобиль и бизнес», 26.06.2024; 85% vs 66% «по собственным оценкам», год 31/24, 5 лет 16/10 | ✓ | https://wciom.ru/analytical-reviews/analiticheskii-obzor/kvartira-avtomobil-i-biznes | Все цифры и дата дословно на странице |
+| 2 | arsenal.stats[1] | url ЦБ; 9,5→20 (28.02), 17 (11.04), 14 (04.05), 11 (27.05), 9,5 (14.06) | ✓ | https://www.cbr.ru/hd_base/KeyRate/?UniDbQuery.Posted=True&UniDbQuery.From=01.02.2022&UniDbQuery.To=30.06.2022 | Все даты переходов совпадают |
+| 3 | arsenal.quote.author | + «со ссылкой на армейскую поговорку» | ✓ | https://www.presidency.ucsb.edu/documents/remarks-the-national-defense-executive-reserve-conference | Соответствует исходному аудиту |
+| 4 | za.theses[2] (+ za.attacks[1], protiv.attacks[2], protiv.infokiller[2], verdict.why) | ВЦИОМ 25.11.2024: на годы вперёд 29%, 2020–2023 — 20–25% | ✓ | https://wciom.ru/analytical-reviews/analiticheskii-obzor/vse-idet-po-planu | Дословно в «Факт № 1» (опрос 16.11.2024, 18+). Логика ок; оговорка «все россияне, самооценка» закрыта protiv.attacks[2] |
+| 5 | protiv.theses[1] (+ protiv.infokiller[0].a, za.attacks[1]) | цели достигают 84% планирующих на годы vs 48% живущих одним днём | ✓ | https://wciom.ru/analytical-reviews/analiticheskii-obzor/vse-idet-po-planu | Дословно «48% vs. 84%» («Факт № 2»). Тезис бьёт пользу плана, не утрату у молодых — слабость признана в verdict.why |
+| 6 | za.attacks[2] | на 5 лет 16% vs 10% | ✓ | https://wciom.ru/analytical-reviews/analiticheskii-obzor/kvartira-avtomobil-i-biznes | Теперь по адресу (ПРОТИВ №3) |
+| 7 | za.infokiller[1], protiv.expect[2].a, verdict.why | логика и стиль | ✓ | — | Противоречие с protiv.ask[1] снято; дубль ловушки убран; лимиты слов соблюдены, validate_card: OK, 0 замечаний |
+
+Итого после правок: ошибок 0 (✗ 0, ⚠ 0, ? 0). Мои правки в карточку не понадобились.
+
+ГОТОВО
+- что изменилось: исправлены url/источник ВЦИОМ 2024 (релиз 26.06.2024, «по собственным оценкам») и ставки ЦБ (база cbr.ru, +14% и 11%); у цитаты Эйзенхауэра — пометка «армейская поговорка».
+- ЗА №3 заменён на «горизонт вернулся» (ВЦИОМ 11.2024: 29% vs 20–25%), ПРОТИВ №2 — на «без плана цели реже» (84% vs 48%); атаки, инфокиллеры, expect и verdict переписаны под них, «задним числом» убрано.
+- Все новые цифры подтверждены на страницах ВЦИОМ/ЦБ; карточка проходит валидатор.
