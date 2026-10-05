@@ -39,3 +39,22 @@
 | za.attacks[0]; za.expect[0] | ответ на «скрининг не только возраст» | «скрининг снимает тревогу, не риск: в 40 вчетверо выше, чем в 35»; ответ на «порог произволен» | GLOWM (см. выше) |
 | za.ask[1]; za.infokiller[0].a | «кто вернёт 38-летней годы»; «ошибка необратима» (рискованно) | «готовность в 40 вернёт шансы ЭКО до 35?»; «возраст яйцеклетки назад не отмотать» | — |
 | za.infokiller[2].a | «решает человек» (уступка) | решение за человеком, но биология задаёт верхнюю границу, готовность — как успеть до неё | — |
+
+## Повторная проверка
+| # | Где (путь в JSON) | Утверждение (кратко) | Вердикт | Источник (URL) | Что исправить |
+|---|---|---|---|---|---|
+| R1 | arsenal.stats[0]; za.theses[0].pochemu; za.expect[0].a; za.attacks[0]; protiv.infokiller[0].a | 1/1250 в 25, 1/400 в 35, 1/100 в 40; «в 40 вчетверо выше, чем в 35»; 99 из 100 без синдрома | ✓ | https://glowm.com/resources/glowm_www4/presentations/MEP-Pub7946-The%20Fundamentals%20of%20Preconception%20Care-CC%20BY%20SA/Premodule%20File/age.htm | Дословно «At age 35, a 1-in-400… At age 40, a 1-in-100», © 2009 Univ. of Alabama School of Medicine. 400/100 = 4 ✓ |
+| R2 | protiv.theses[2] | Порог 35 «довольно произвольно», риск амниоцентеза ≈ риск анеуплоидии; скрининг 1-го триместра снял тревогу | ✓ | GLOWM (R1) | «somewhat arbitrarily… procedural risk of amniocentesis roughly equals the risk of aneuploidy… first trimester screening, have largely dismissed concern» |
+| R3 | arsenal.stats[1]; protiv.theses[0].primer; protiv.infokiller[2].a | ~26 лет, Минтруд (Баталина), 25.03.2025, по ТАСС | ✓ (вторичный) | https://expert.ru/news/v-mintrude-nazvali-sredniy-vozrast-zhenshchin-pri-rozhdenii-pervogo-rebenka | — |
+| R4 | protiv.theses[0].pochemu; protiv.expect[0].a; protiv.infokiller[1].a; verdict.why | Риск выше до 20; окно 20–35 | ✓ | https://www.who.int/news-room/fact-sheets/detail/adolescent-pregnancy | ВОЗ (10.04.2024): матери 10–19 лет — выше риск, чем 20–24 |
+| R5 | arsenal.quote | СК ст. 63 п. 1, url добавлен | ✓ (вторичный) | https://rulaws.ru/amp/Semeynyy-kodeks/Razdel-IV/Glava-12/Statya-63/ | Дословно ✓ |
+| R6 | za.theses[1].pochemu/primer | Заморозка до 35; ОМС лечит бесплодие, не возраст яйцеклетки | ✓ | https://hfea.gov.uk/about-us/news-and-press-releases/2018/press-release-age-is-the-key-factor-for-egg-freezing-success-says-new-hfea-report-as-overall-treatment-numbers-remain-low/ | «egg freezing below the age of 35 offers women their best chance» |
+| R7 | za.theses[2] | До 35 — 31% родов на перенос, после 40 своими клетками — 10%; «возраст — главный фактор успеха ЭКО» | ⚠→исправлено | https://www.hfea.gov.uk/about-us/news-and-press-releases/2020/2018-trends-in-fertility-treatment/ | Цифры и «Age is still the key factor for a successful IVF outcome» ✓; но это отчёт 2020 г. о данных 2018 → primer: «HFEA, данные за 2018» (исправил сам). 31/10 ≈ втрое ✓ |
+| R8 | protiv.attacks[2]; za.ask[1]; za.infokiller[0].a; za.infokiller[2].a | новые формулировки (логика/стиль) | ✓ | — | attacks[2] бьёт по ЗА т.3; рискованные «38-летней»/«необратима» убраны; уступка «решает человек» закрыта формулой о верхней границе. Лимиты слов соблюдены, validate_card: 0 замечаний |
+
+Итог повторной проверки: ошибок 1 (✗ 0, ⚠ 1 — исправлено, ? 0).
+
+ГОТОВО
+- что изменилось: синдром Дауна → GLOWM 2009 (1/400 в 35), «Росстат 2022» → Минтруд 2025 (~26 лет), граница риска «до 18» → «до 20» (ВОЗ), окно 20–35 во всей карточке; цитата СК ст. 63 получила url.
+- ЗА т.3 заменён на HFEA (31% до 35 против 10% после 40, данные за 2018), ЗА т.2 только про заморозку, ОМС-тезис исправлен; ПРОТИВ т.3 заменён на «порог 35 условен» (GLOWM), атаки/ответы переписаны под новые тезисы.
+- Убраны рискованные фразы («кто вернёт 38-летней годы», «точных цифр не назову»); аудитор уточнил год HFEA в za.theses[2].primer.
