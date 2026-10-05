@@ -16,3 +16,16 @@
 
 ## Итого: ошибок 6 (✗ 0, ⚠ 6, ? 0)
 Главное: п. 2 (реклама VPN запрещена с 1.09.2025, а не с 1.03.2024: в 2024-м запретили популяризацию) и п. 9 (отягчающее — уже действующий закон). Остальное — правка формулировок.
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| arsenal.stats[1] | Реклама и популяризация VPN запрещены с 1 марта 2024 (PPC.World) | Реклама средств обхода блокировок запрещена с 1 сентября 2025 (ч. 10.8 ст. 5 закона «О рекламе»), Ведомости (вторичный) | https://www.vedomosti.ru/media/articles/2026/01/27/1172111-fas-vinesla-pervoe |
+| za.theses[0].primer | Реклама VPN запрещена с 1 марта 2024 | Популяризация — с марта 2024, реклама — с сентября 2025; 469 сервисов | https://ppc.world/news/s-1-marta-rossiyanam-nelzya-budet-ispolzovat-vpn-dlya-dostupa-k-zapreschennym-resursam/ ; https://www.vedomosti.ru/media/articles/2026/01/27/1172111-fas-vinesla-pervoe |
+| traps[2].exit | реклама VPN запрещена с 2024 | популяризация с 2024, реклама с сентября 2025; поиск «экстремистских» | те же |
+| za.theses[1].pochemu | Иностранный сервис не обязан блокировать | Иностранный сервис закон игнорирует и следствию не отвечает | https://consultant.ru/document/cons_doc_LAW_534443/ |
+| protiv.theses[2].primer | поиск запрещённых материалов | поиск экстремистских материалов | https://www.consultant.ru/document/cons_doc_LAW_34661/ |
+| za.attacks[1] | поиск запрещённого | поиск экстремистских материалов | https://www.consultant.ru/document/cons_doc_LAW_34661/ |
+| traps[2].problem | поиск запрещённого | поиск экстремистских материалов | https://www.consultant.ru/document/cons_doc_LAW_34661/ |
+| za.expect[2].a | материалы из федерального списка | из федерального списка и приравненных законом | https://aif.ru/society/law/kakoy-shtraf-grozit-za-poisk-v-internete-ekstremistskih-materialov |
+| protiv.infokiller[2].q | Следователи предлагают считать VPN отягчающим | VPN при преступлении уже отягчающее, с сентября 2025 | https://www.zakonrf.info/doc-38902246/ |
