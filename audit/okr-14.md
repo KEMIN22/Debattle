@@ -48,3 +48,19 @@
 | verdict.why | эффект закона 2024 | Британские итоги (−21%); закон 2026 — минимум, не потолок | — |
 
 Валидатор: 0 замечаний.
+
+## Повторная проверка
+| # | Где (путь в JSON) | Утверждение (кратко) | Вердикт | Источник (URL) | Что исправлено |
+|---|---|---|---|---|---|
+| R1 | arsenal.stats[1]; protiv.theses[1].primer; za.infokiller[1]; za.attacks[1] | 210-ФЗ от 26.06.2026: банк/оператор связи возмещает при неисполнении обязательных мер; нормы — с 01.03.2027 | ✓ (первичный) | https://www.garant.ru/products/ipo/prime/doc/414344315/ (ст. 7 п. 2 → ч. 3.13-1…3.13-7 ст. 8 161-ФЗ; ст. 11 ч. 3: ст. 7 п. 2 — с 1 марта 2027); https://www.consultant.ru/law/hotdocs/94657.html (реквизиты); https://amp.rbc.ru/rbcnews/rbcfreenews/6a76c79d9a794737182ea38f («с марта 2027… если организация нарушила требования защиты»); https://www.vedomosti.ru/technology/news/2026/06/08/1204113-kommersant-antifrod («требования соблюдены, клиент сам перевёл — компенсация не предусмотрена») | stats[1]: источник и URL заменены на первичный текст (ГАРАНТ) вместо СберБизнес. primer тезиса «против» №2: добавлено «с марта 2027» — норма ещё не действует, нельзя говорить «уже платит» |
+| R2 | za.theses[0] | ч. 3.1 ст. 8 161-ФЗ: согласие «под влиянием обмана» = без добровольного согласия | ✓ | https://legalacts.ru/doc/federalnyi-zakon-ot-24072023-n-369-fz-o-vnesenii-izmenenii/ | — |
+| R3 | za.theses[2].primer; verdict.why; traps[1].exit | Британия: потери −≈21%, клиенты не стали беспечнее | ✓ (21% и «less vigilant» — вторичные) | https://www.psr.org.uk/news-and-updates/latest-news/news/payment-fraud-falls-by-73m-following-psr-reimbursement-scheme/ (первичный: −£73 млн/год, возмещение 54%→65%, 01.07.2026); https://www.regulationtomorrow.com/2026/07/payment-fraud-falls-by-73m-following-psr-reimbursement-scheme/ (≈21%); https://www.crowdfundinsider.com/2026/07/290056-uk-payment-systems-regulator-psr-confirms-app-fraud-reimbursement-policy-delivers-strong-positive-results/ («no evidence of… consumers becoming less vigilant») | — |
+| R4 | protiv.expect[1].a | В Британии к грубой небрежности относится игнорирование предупреждения банка | ✓ | https://www.footanstey.com/our-insights/articles-news/psr-publishes-app-scams-reimbursement-policy-statement/ | Нюанс устно: это одно из 4 оснований, планка «грубой» небрежности высокая |
+| R5 | protiv.attacks[0..1], expect[0].a, expect[2].a, infokiller[0,2].a | Закон 2024: возврат при получателе из базы ЦБ; после предупреждения и повторного подтверждения — выбор клиента | ✓ | legalacts (ч. 3.1, 3.13, 3.14 ст. 8 161-ФЗ) | — |
+| R6 | traps[1].problem | «российских цифр по теме нет» | ⚠ | https://amp.rbc.ru/rbcnews/rbcfreenews/6a76c79d9a794737182ea38f (ЦБ публикует цифры: 17,5 млн попыток, 1,9 трлн руб. за II кв.) | Заменено: «российской оценки эффекта возмещения нет» |
+
+Логика и стиль новых тезисов: атаки бьют в цель (za.attacks[1] → protiv.theses[1]; protiv.attacks[0] → za.theses[0]). za.infokiller[2].a смягчён корректно. Риск для «против»: закон 2026 ещё не действует (с 01.03.2027) — говорить «государство уже выбрало», а не «банк уже платит». Валидатор: 0 замечаний.
+
+ГОТОВО
+- что изменилось: исходный аудит — 3 ⚠ (ошибочное «банк отвечает за пропущенные признаки», «нажатие кнопки не обман», нет закона 2026); fixer переписал za.theses[0], protiv.theses[0–1], атаки/ответы под ч. 3.1/3.13/3.14 161-ФЗ, добавил 210-ФЗ и британскую оценку 2026 (−21%).
+- recheck: 210-ФЗ подтверждён по первичному тексту ГАРАНТ (26.06.2026, ст. 7 п. 2 — с 01.03.2027); в stats[1] URL заменён на garant, в primer добавлено «с марта 2027», в traps[1] уточнено «нет российской оценки эффекта». Ошибок после правок: 0.
