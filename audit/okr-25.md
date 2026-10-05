@@ -56,3 +56,26 @@
 | verdict.why | опора на лицензии | иски, договоры (пособие, переобучение), требования к YouTube; нет вышедшего полного метра | — |
 
 protiv.infokiller[2] (№19, ?) оставлен: без номера статьи, общий принцип. validate_card.py: 0 замечаний.
+
+## Повторная проверка
+| # | Где (путь в JSON) | Утверждение (кратко) | Вердикт | Источник (URL) | Что исправлено |
+|---|---|---|---|---|---|
+| R1 | za.theses[0].primer | «Союзмультфильм» (ТАСС): ИИ для фонов, света, поиска ошибок; творчество за людьми | ✓ вторичный | https://www.osnmedia.ru/kultura/soyuzmultfilm-ne-planiruet-zamenyat-kreativnye-professii-ii/ (9.04.2026) | — |
+| R2 | za.infokiller[2].a | Слащева: гибрид традиционной анимации и ИИ | ✓ вторичный | там же | — |
+| R3 | za.theses[1].primer; za.infokiller[0].a; protiv.attacks[0] | «Самовар»: 2027–2028, в 5–10 раз дешевле; срок сдвигали с конца 2026 | ✓ | https://kino.mail.ru/news/105082-v-rf-vyijdet-pervyij-sozdannyij-s-pomoschyu-nejrosetej-polnometrazhnyij-multfilm/ (ТАСС, 23.10.2025) | — |
+| R4 | za.theses[2].primer; za.attacks[2]; verdict.why | IATSE 2024: при потере работы из-за ИИ — пособие и переобучение; TAG: ИИ не урезает оплату и титры | ✓ | https://variety.com/2024/tv/news/animation-guild-artificial-intelligence-amptp-contract-1236193937/ | — (для TAG Variety: прочие ИИ-условия «similar to IATSE Basic Agreement») |
+| R5 | za.attacks[0]; za.ask[0] | Письмо Fairplay, ~200 организаций и экспертов | ✓ | https://www.tubefilter.com/2026/04/01/youtube-fairplay-kids-ai-open-letter/ (1.04.2026) | — |
+| R6 | za.expect[2].a | YouTube принял меры против 7 каналов, 2 закрыл | ⚠ | https://www.the74million.org/zero2eight/ai-slop-is-flooding-childrens-media-parents-should-be-very-alarmed/ | Апдейт 27.03.2026: закрыты все 7 (6 — нарушение правил, 1 — спам). Исправлено: «YouTube закрыл семь каналов» |
+| R7 | protiv.theses[0].pochemu; protiv.expect[2].a | Метка ИИ на YouTube только для «реалистичного», мультфильмы вне правила | ✓ | там же (политика «seems realistic»; на мультфильмы не распространяется — по словам эксперта Engelbrecht) | — |
+| R8 | za.infokiller[1]; traps[0] | Сделка Disney закончилась вместе с Sora | ✓ | https://www.mediapost.com/publications/article/413822/ (24.03.2026) | — |
+| R9 | za.attacks[1]; za.expect[0] | Disney судится с Midjourney | ✓ | https://chatgptiseatingtheworld.com/category/disney-v-midjourney/ | — Мирового не найдено; медиация (срок 19.08.2026). Проверить накануне |
+| R10 | protiv.attacks[1] | «Flow»: Оскар, €3,5 млн, Blender | ✓ | https://en.wikipedia.org/wiki/Flow_(2024_film) | — |
+| R11 | arsenal.quote.url | Стенограмма NPR с цитатой дель Торо | ✓ | https://www.tpr.org/arts-culture/2025-10-23/filmmaker-guillermo-del-toro-says-id-rather-die-than-use-generative-ai | — |
+
+Логика и стиль новых тезисов: противоречие ЗА №1 (сюжет GigaChat) снято; ЗА attacks[2] теперь бьёт по ПРОТИВ №3, ПРОТИВ attacks[0] — по ЗА №2. Лимиты слов соблюдены. validate_card.py: 0 замечаний.
+
+Итого после повторной проверки: ошибок 1 (✗ 0, ⚠ 1 — исправлено, ? 0).
+
+ГОТОВО
+- что изменилось: za.expect[2].a — «принял меры против семи каналов, два закрыл» → «закрыл семь каналов» (апдейт The 74 от 27.03.2026).
+- Остальные 17 исправлений fixer подтверждены по открытым страницам.
