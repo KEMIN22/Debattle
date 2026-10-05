@@ -17,3 +17,15 @@
 Рискованно вслух: «уведомление — просьба и только» (ПРОТИВ) опровергается сайтом МЧС за 10 секунд; пример с Черкесским перевалом (болезнь, а не ошибка маршрута) соперник легко развернёт.
 
 ## Итого: ошибок 5 (✗ 0, ⚠ 4, ? 1)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| za.theses[1].primer | 2024 — рекордное число поездок | ~92 млн турпоездок, рекорд за 23 года (Чернышенко) | https://www.pnp.ru/social/chernyshenko-zayavil-chto-2024-god-stal-rekordnym-po-chislu-turpoezdok-po-rossii.html |
+| za.attacks[2] | «25 тысяч групп в 2024» как риск | Без цифры: группы тоже попадают в беду | — (переформулировка) |
+| protiv.theses[0].primer | Эвакуация с Черкесского перевала (болезнь) | МЧС: безопаснее с аттестованными инструкторами-проводниками | https://mchs.gov.ru/deyatelnost/press-centr/novosti/5751339 |
+| protiv.theses[1].primer | 25 тыс. групп, 169 тыс. детей | Туроператорам проводник обязателен, он сам уведомляет МЧС | https://mchs.gov.ru/deyatelnost/press-centr/novosti/5751339 |
+| protiv.theses[2].primer | 2025: спецтехника и вертолёт | Окт. 2025: вертолёт снял 8 туристов у р. Уруштен (Сочи) | https://www.mentoday.ru/adventures/news/13-10-2025/zastryali-v-gorah-sochi-gruppu-turistov-s-detmi-otrezala-ot-mira-razbushevavshayasya-reka/ (вторичный, со ссылкой на ТАСС) |
+| protiv.attacks[2] | «Уведомление — просьба и только» | Уведомление работает при выходе на связь по графику | https://mchs.gov.ru/deyatelnost/press-centr/novosti/5751339 |
+| arsenal.stats[1] | «по почте», verified:false, старая ссылка | Одиночки и группы; заказным письмом; 2026; verified:true | https://mchs.gov.ru/deyatelnost/press-centr/novosti/5751339 |
+| traps[2] | «Не утверждать обязательность» | Обязательно для гор, воды, пещер; для прогулок не нужно | https://mchs.gov.ru/deyatelnost/press-centr/novosti/5751339 |
