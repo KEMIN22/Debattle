@@ -31,3 +31,25 @@
 | arsenal.stats[1] | 3 региона, до 31.12.2025 (gazeta.ru не открылась) | 12 регионов с 2026, до 31.12.2029 (571-ФЗ) | https://ppt.ru/amp/obzory/vstupaet-v-silu/federalnyy-zakon-29-12-2025-571-fz-o-prodlenii-eksperimenta-po-rasshireniyu-dostupnosti-spo |
 | arsenal.quote | Пусто | Фальков: «Нет такой необходимости в тотальном высшем образовании…» (июнь 2026; прямая речь в пересказе «Комсомольской правды») | https://science.mail.ru/news/51346-falkov-ryinok-truda-ne-nuzhdaetsya-v-totalnom-vyisshem-obrazovanii/ |
 | traps[0].exit | «только московские правила 2025» | «только правила двух ОГЭ» (под обновлённый stats[1]) | — |
+
+## Повторная проверка
+| Путь в JSON | Стало (кратко) | Вердикт | Источник (URL) | Комментарий |
+|---|---|---|---|---|
+| za.theses[0].primer | Москва, 2026: +10 тыс. мест, всего 47 тыс. | ✓ | https://vfokuse.mail.ru/news/69613046-sobyanin-kolichestvo-byudzhetnyih-mest-v-kolledzhah-moskvyi-uvelichitsya-na-10-tyis/ | 24.03.2026, АиФ: «увеличится на 10 тысяч, в этом году их будет 47 тысяч» |
+| za.theses[2].primer | С 2026 без ЕГЭ — по профилю | ✓ | https://expert.ru/news/minobrnauki-skorrektirovalo-poryadok-priema-v-vuzy-v-2026-godu/ | «без ЕГЭ только на специальности, соответствующие профилю» |
+| za.infokiller[0].a | 95% трудоустроены, 3,8 тыс. компаний | ⚠ → исправлено | https://www.m24.ru/news/24032026/885193 | На странице «более 3,8 тысячи»; дописал «более». Цифры приведены как «ранее Собянин рассказывал» — подавать как оценку мэрии (так и подано) |
+| za.infokiller[2].a | Без ЕГЭ — по профилю | ✓ | https://expert.ru/news/minobrnauki-skorrektirovalo-poryadok-priema-v-vuzy-v-2026-godu/ | — |
+| protiv.theses[0].primer | 2024–2026: жалобы из разных регионов | ✓ | https://mel.fm/ucheba/shkola/2150473-eto-narusheniye-zakona-pochemu-detey-snova-otkazyvayutsya-zachislyat-v-10-e-klassy-i-predlagayut-im- | 14.07.2026: «снова, как в 2025-м и 2024-м… из разных регионов» |
+| protiv.theses[2].primer | Прогноз «ДП», март 2026 | ✓ (заголовок) | https://www.dp.ru/a/2026/03/11/vuzi-peterburga-mogut-poterjat | Текст не грузится, заголовок и дата совпадают; подано как прогноз — корректно |
+| protiv.infokiller[0].a | «Мел»: жалобы 2024–2026 | ✓ | https://mel.fm/ucheba/shkola/2150473-eto-narusheniye-zakona-pochemu-detey-snova-otkazyvayutsya-zachislyat-v-10-e-klassy-i-predlagayut-im- | — |
+| protiv.infokiller[1].a | Летом 2026 конкурс вырос | ✓ | https://mel.fm/novosti/4807531-peterburgskiye-vuzy-stolknulis-s-rekordnym-konkursom-chislo-zayavleny-vyroslo-na-60 | 17.08.2026: конкурс вырос в 1,5 раза, 1,6 млн заявлений |
+| arsenal.stats[0] | 2025: 45% (49 тыс.); 2026: +10 тыс. | ✓ | https://www.m24.ru/news/24032026/885193 | Дословно |
+| arsenal.stats[1] | 12 регионов, до 31.12.2029, 571-ФЗ | ✓ | https://ppt.ru/amp/obzory/vstupaet-v-silu/federalnyy-zakon-29-12-2025-571-fz-o-prodlenii-eksperimenta-po-rasshireniyu-dostupnosti-spo | Список участников — 12 регионов (в лиде ppt.ru опечатка «11 новых», по списку новых 9) |
+| arsenal.quote | Фальков, «нет такой необходимости в тотальном высшем образовании…» | ✓ | https://science.mail.ru/news/51346-falkov-ryinok-truda-ne-nuzhdaetsya-v-totalnom-vyisshem-obrazovanii/ | 19.06.2026, XXVI HREXPO, прямая речь дословно; вторичный (КП/Минобрнауки) |
+| traps[0].exit | «только правила двух ОГЭ» | ✓ | — | Согласовано с stats[1] |
+
+Валидатор: OK, 0 замечаний.
+
+ГОТОВО
+- что изменилось: убраны опоры на иноагентов (Москва-2025, «поручения Путина») → «Мел» 2024–2026 и Собянин 2026 (+10 тыс., всего 47 тыс.); ОГЭ-эксперимент обновлён до 12 регионов и 2029 (571-ФЗ); stats[0] — 45%/49 тыс. (m24).
+- добавлены цитата Фалькова (июнь 2026), данные мэрии о трудоустройстве (95%, более 3,8 тыс. компаний), уточнение «без ЕГЭ только по профилю», петербургский прогноз подан как прогноз с оговоркой о росте конкурса летом 2026.

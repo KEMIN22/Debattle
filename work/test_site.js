@@ -6,7 +6,7 @@ const { chromium } = require('playwright');
   const errs = []; p.on('pageerror', e => errs.push(e.message)); p.on('console', m => m.type() === 'error' && errs.push(m.text()));
   await p.goto('file:///home/user/Debattle/docs/offline.html');
   const log = (k, v) => console.log(k, v);
-  log('topics okr', await p.locator('.topic').count());
+  log('topics okr', await p.locator('.topic').count()); await p.click('#regsw'); await p.waitForTimeout(200);
   await p.click('.tab:nth-child(2)'); await p.waitForTimeout(200); log('topics reg', await p.locator('.topic').count());
   await p.fill('#q', '7'); log('search 7', await p.locator('.topic').count());
   await p.fill('#q', 'vpn'); await p.fill('#q', 'родител'); log('search родител', await p.locator('.topic').count());

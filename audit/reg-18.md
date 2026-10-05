@@ -26,3 +26,21 @@
 | protiv.attacks[0] | Колледжи недобирают (неверно) | Рабочие вакансии — четверть рынка, а дефицит держится | https://rg.ru/2026/01/12/issledovanie-kazhdaia-chetvertaia-vakansiia-v-rossii-dlia-rabochih-specialnostej.html |
 | protiv.expect[0].a | Зарплаты растут не там, где дефицит | Зарплаты в производстве +17%, курьеры возвращаются на заводы (2025) | https://vfokuse.mail.ru/articles/65224466-kureryi-massovo-uhodyat-na-zavodyi/ |
 | traps[2].exit | Только безработица и самозанятые | Только цифры с источником: безработица, самозанятые, вакансии hh.ru | — (согласование с новыми примерами) |
+
+## Повторная проверка
+| Путь в JSON | Новое утверждение (кратко) | Вердикт | Источник (URL) | Действие |
+|---|---|---|---|---|
+| arsenal.stats[0] | 2,2% в 2025, минимум за 2017–2025 (Росстат/Statbase) | ✓ | https://statbase.ru/data/rus-unemployment-rate-by-region-national-stat/ («Среднегодовая безработица в России в 2025 году снизилась до 2,2%», ряд 2017–2025) | — |
+| za.theses[0].primer | 2025: почти четверть вакансий — рабочие, 2,3 млн (hh.ru), дефицит держится | ✓ | https://rg.ru/2026/01/12/issledovanie-kazhdaia-chetvertaia-vakansiia-v-rossii-dlia-rabochih-specialnostej.html (2,3 млн; дефицит «несколько миллионов» к концу 2025) | — |
+| za.theses[1].primer | ВЦИОМ, 2025: 33% молодёжи настроены быстро менять работу ради опыта | ✓ | https://wciom.ru/analytical-reports/analiticheskii-doklad/trudoustroistvo-molodezhi-v-sovremennoi-rossii (17.04.2025); https://expert.ru/news/vtsiom-rasskazal-kak-prokhodit-trudoustroystvo-molodezhi-v-sovremennoy-rossii | — |
+| za.infokiller[0].a | 2,3 млн рабочих вакансий за 2025, самозанятость растёт | ✓ | rg.ru (выше); https://investfuture.ru/articles/chislo-samozanyatykh-v-rossii-vyroslo-na-26-8-dostignuv-15-4-milliona-1179307102 | — |
+| protiv.theses[1].primer | 2024: Минпромторг — 1,5 млн курьеров оттягивают рабочих «с производств» | ⚠ → исправлено | https://rtvi.com/news/v-minpromtorge-zayavili-o-riskah-dlya-rossijskoj-ekonomiki-iz-za-kurerov/ (02.12.2024; «из других секторов экономики», вторичный, по РБК) | «с производств» → «рабочую силу из других секторов» |
+| protiv.attacks[0] | Рабочие вакансии — четверть рынка | ⚠ → исправлено | rg.ru (выше): «почти четверть» | «четверть» → «почти четверть» |
+| protiv.expect[0].a | Зарплаты в производстве +17%, курьеры возвращаются на заводы | ⚠ → исправлено | https://vfokuse.mail.ru/articles/65224466-kureryi-massovo-uhodyat-na-zavodyi/ (11.03.2025: «медианные зарплатные предложения выросли на 17%») | «зарплаты» → «зарплатные предложения» |
+| traps[2].exit | Только цифры с источником: безработица, самозанятые, вакансии hh.ru | ✓ | — (согласовано с примерами) | — |
+
+Валидатор: OK, 0 замечаний.
+
+ГОТОВО
+- что изменилось: источник безработицы 2,2% (был Moscow Times, иноагент) заменён на Росстат/Statbase; неверная атака «колледжи недобирают» и «рабочие профессии выбирают неохотно» заменены цифрой hh.ru (2,3 млн рабочих вакансий, 2025).
+- Пример про ритейл заменён на ВЦИОМ 2025 (33%), у курьеров добавлен 2024 год, ответ о зарплатах — Зарплата.ру +17% (2025); при перепроверке уточнены формулировки: «из других секторов», «почти четверть», «зарплатные предложения».
