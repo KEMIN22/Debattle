@@ -124,21 +124,22 @@
         "fact": "Мошенничество по ст. 159 УК РФ — хищение путём обмана или злоупотребления доверием",
         "source": "Уголовный кодекс РФ, ст. 159",
         "year": 2025,
-        "url": "https://www.consultant.ru/document/cons_doc_LAW_10699/",
-        "verified": false
+        "url": "https://base.garant.ru/10108000/7f1391d5bfd3db19990900228372be85/",
+        "verified": true
       },
       {
-        "fact": "Ticketmaster сообщил о рекордном числе запросов при продаже билетов на Eras Tour: спрос, а не обман",
-        "source": "заявление Ticketmaster",
-        "year": 2022,
-        "url": "https://www.ticketmaster.com/",
-        "verified": false
+        "fact": "КоАП РФ ст. 14.4.3: продажа билетов на спектакли и в музеи выше номинала штрафуется; однократная перепродажа личного билета — исключение",
+        "source": "КоАП РФ, ст. 14.4.3 (ФЗ от 27.12.2019 № 493-ФЗ)",
+        "year": 2019,
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_34661/1c8e7943d9564838919f0437a6fd46520a4b0aa9/",
+        "verified": true
       }
     ],
     "quote": {
       "text": "Нет решений, есть только компромиссы.",
       "author": "Томас Соуэлл",
-      "verified": false
+      "verified": true,
+      "url": "https://www.aei.org/carpe-diem/video-thomas-sowells-most-profound-economic-insight-and-his-three-questions-for-the-left/"
     },
     "life": "Вспомни, как ты или друзья покупали билет с рук или в чате: как проверяли подлинность, сколько переплатили?"
   },

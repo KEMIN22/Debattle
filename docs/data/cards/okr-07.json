@@ -125,20 +125,21 @@
         "source": "Конвенция ООН о правах ребёнка, ст. 16",
         "year": 1989,
         "url": "https://www.un.org/ru/documents/decl_conv/conventions/childcon.shtml",
-        "verified": false
+        "verified": true
       },
       {
         "fact": "Вред при крайней необходимости не преступление, если опасность нельзя устранить иначе",
         "source": "Уголовный кодекс РФ, ст. 39",
         "year": 2025,
-        "url": "https://www.consultant.ru/document/cons_doc_LAW_10699/",
-        "verified": false
+        "url": "https://www.consultant.ru/document/cons_doc_LAW_10699/68eac2d2c39341d4a45238bffce4ea253949a106/",
+        "verified": true
       }
     ],
     "quote": {
-      "text": "Наилучшие интересы ребёнка должны быть предметом первостепенного внимания.",
-      "author": "Конвенция ООН о правах ребёнка, ст. 3 (близко к тексту)",
-      "verified": false
+      "text": "Во всех действиях в отношении детей … первоочередное внимание уделяется наилучшему обеспечению интересов ребенка.",
+      "author": "Конвенция ООН о правах ребёнка, ст. 3, п. 1",
+      "verified": true,
+      "url": "https://www.un.org/ru/documents/decl_conv/conventions/childcon.shtml"
     },
     "life": "Вспомни, как сам скрывал проблему в чате от родителей и что помогло, если помогло. Только реальное."
   },
