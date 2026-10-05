@@ -15,3 +15,19 @@
 | 10 | arsenal.quote | Пусто | — (подсказка) | https://mel.fm/ucheba/shkola/2150473-eto-narusheniye-zakona-pochemu-detey-snova-otkazyvayutsya-zachislyat-v-10-e-klassy-i-predlagayut-im- | Вариант: Фальков (министр науки и высшего образования, июнь 2026, HREXPO): «нет необходимости в тотальном высшем образовании». Это пересказ «Мела», прямой речи у первоисточника я не открывал, поэтому verified:false до проверки. Там же Кравцов: в СПО 3,9 млн студентов. |
 
 ## Итого: ошибок 7 (✗ 1, ⚠ 5, ? 1)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| za.theses[0].primer | «После поручений Путина» +10 тыс. мест | Москва, 2026: ещё +10 тыс. бюджетных мест, всего 47 тыс. | https://vfokuse.mail.ru/news/69613046-sobyanin-kolichestvo-byudzhetnyih-mest-v-kolledzhah-moskvyi-uvelichitsya-na-10-tyis/ |
+| za.theses[2].primer | Вузы берут на сокращённые программы (?) | С 2026 без ЕГЭ — только по профилю специальности | https://expert.ru/news/minobrnauki-skorrektirovalo-poryadok-priema-v-vuzy-v-2026-godu/ |
+| za.infokiller[0].a | «Свежей цифры не назову» | Мэрия: 95% трудоустроены, 3,8 тыс. компаний-партнёров (оценка города) | https://www.m24.ru/news/24032026/885193 |
+| za.infokiller[2].a | Сокращённые программы | Без ЕГЭ — по профилю специальности | https://expert.ru/news/minobrnauki-skorrektirovalo-poryadok-priema-v-vuzy-v-2026-godu/ |
+| protiv.theses[0].primer | Москва, 2025 (источники-иноагенты) | 2024–2026: жалобы из разных регионов, в 10 класс не берут | https://mel.fm/ucheba/shkola/2150473-eto-narusheniye-zakona-pochemu-detey-snova-otkazyvayutsya-zachislyat-v-10-e-klassy-i-predlagayut-im- |
+| protiv.theses[2].primer | Подано как тренд | Подано как прогноз «Делового Петербурга», март 2026 | https://www.dp.ru/a/2026/03/11/vuzi-peterburga-mogut-poterjat |
+| protiv.infokiller[0].a | «Московские случаи 2025» | «Мел»: жалобы из регионов 2024–2026, масштаб не утверждаю | https://mel.fm/ucheba/shkola/2150473-eto-narusheniye-zakona-pochemu-detey-snova-otkazyvayutsya-zachislyat-v-10-e-klassy-i-predlagayut-im- |
+| protiv.infokiller[1].a | Только прогноз | + летом 2026 конкурс вырос, опора на механизм | https://mel.fm/novosti/4807531-peterburgskiye-vuzy-stolknulis-s-rekordnym-konkursom-chislo-zayavleny-vyroslo-na-60 |
+| arsenal.stats[0] | 37 тыс. мест (2025, mentoday) | 2025: 45% девятиклассников (49 тыс.) в колледжах; 2026: +10 тыс. мест | https://www.m24.ru/news/24032026/885193 |
+| arsenal.stats[1] | 3 региона, до 31.12.2025 (gazeta.ru не открылась) | 12 регионов с 2026, до 31.12.2029 (571-ФЗ) | https://ppt.ru/amp/obzory/vstupaet-v-silu/federalnyy-zakon-29-12-2025-571-fz-o-prodlenii-eksperimenta-po-rasshireniyu-dostupnosti-spo |
+| arsenal.quote | Пусто | Фальков: «Нет такой необходимости в тотальном высшем образовании…» (июнь 2026; прямая речь в пересказе «Комсомольской правды») | https://science.mail.ru/news/51346-falkov-ryinok-truda-ne-nuzhdaetsya-v-totalnom-vyisshem-obrazovanii/ |
+| traps[0].exit | «только московские правила 2025» | «только правила двух ОГЭ» (под обновлённый stats[1]) | — |

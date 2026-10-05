@@ -29,3 +29,20 @@
 | traps[2].problem | поиск запрещённого | поиск экстремистских материалов | https://www.consultant.ru/document/cons_doc_LAW_34661/ |
 | za.expect[2].a | материалы из федерального списка | из федерального списка и приравненных законом | https://aif.ru/society/law/kakoy-shtraf-grozit-za-poisk-v-internete-ekstremistskih-materialov |
 | protiv.infokiller[2].q | Следователи предлагают считать VPN отягчающим | VPN при преступлении уже отягчающее, с сентября 2025 | https://www.zakonrf.info/doc-38902246/ |
+
+## Повторная проверка
+| Путь в JSON | Стало (кратко) | Вердикт | Источник (URL) | Комментарий |
+|---|---|---|---|---|
+| arsenal.stats[1] | Реклама средств обхода запрещена с 1.09.2025 (ч. 10.8 ст. 5 «О рекламе») | ✓ (вторичный) | https://www.vedomosti.ru/media/articles/2026/01/27/1172111-fas-vinesla-pervoe | Дословно: «вступил в силу… с 1 сентября 2025 г.», ч. 10.8 ст. 5 процитирована |
+| za.theses[0].primer | Популяризация с марта 2024, реклама с сентября 2025; 469 сервисов | ✓ | https://ppc.world/news/s-1-marta-rossiyanam-nelzya-budet-ispolzovat-vpn-dlya-dostupa-k-zapreschennym-resursam/ ; Ведомости (выше) | «1 марта 2024 года вступит в силу запрет на популяризацию» (ТАСС со ссылкой на РКН) |
+| traps[2].exit | Популяризация с 2024, реклама с сентября 2025; поиск экстремистских | ✓ | те же | — |
+| za.theses[1].pochemu | Иностранный сервис закон игнорирует и следствию не отвечает | ✓ (оценка) | https://consultant.ru/document/cons_doc_LAW_534443/ | Рассуждение, не факт; юридическую ошибку «не обязан» устранили |
+| protiv.theses[2].primer; za.attacks[1]; traps[2].problem | поиск экстремистских материалов, 3–5 тыс. с 1.09.2025 | ✓ | https://aif.ru/society/law/kakoy-shtraf-grozit-za-poisk-v-internete-ekstremistskih-materialov ; https://www.securitylab.ru/blog/personal/Bitshield/356126.php | Ст. 13.53 КоАП «заведомо экстремистских», 3 000–5 000 руб. (consultant.ru не открылся) |
+| za.expect[2].a | из федерального списка и приравненных законом | ✓ | https://aif.ru/society/law/kakoy-shtraf-grozit-za-poisk-v-internete-ekstremistskih-materialov | Федеральный список или п. 3 ст. 1 114-ФЗ |
+| protiv.infokiller[2].q | VPN при преступлении уже отягчающее с сентября 2025 | ✓ | https://www.zakonrf.info/doc-38902246/ | п. «ф» ч. 1 ст. 63 УК, вступает в силу с 1 сентября 2025 (ст. 4 закона) |
+
+Правок не потребовалось. validate_card.py: OK, 0 замечаний.
+
+ГОТОВО
+- что изменилось: развели даты — популяризация VPN запрещена с 1.03.2024, реклама — с 1.09.2025 (stats[1], primer, traps); «запрещённых» → «экстремистских материалов» (ст. 13.53 КоАП) в 4 местах, уточнён охват (федеральный список + приравненные).
+- Отягчающее за VPN подано как действующий закон (282-ФЗ, с 1.09.2025); «иностранный не обязан» заменено на «игнорирует закон». Мои правки при перепроверке не понадобились.

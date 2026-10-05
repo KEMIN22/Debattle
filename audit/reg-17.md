@@ -13,3 +13,10 @@
 
 ## Итого: ошибок 2 (✗ 0, ⚠ 2, ? 0)
 Главное: stats[0] устарело — с 01.06.2026 моногородов 264, а не 321; URL карточки битый.
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| arsenal.stats[0] | 321 моногород, 61 регион, 13,4 млн (2020), битый URL aspirant.msu.ru | С 1 июня 2026 в перечне 264 моногорода (до этого 321), 2026 | https://ppt.ru/obzory/vstupaet-v-silu/rasporyazhenie-pravitelstva-rf-11-03-2026-469-r-o-perechne-monogorodov ; 321: https://rg.ru/2022/09/08/monogorod-prosiat-umerit-zaprosy.html |
+| arsenal.stats[1] | 7,6% на новых местах 10 лет, year 2023 | 7,6% 10 лет для получивших статус в установленный срок, year 2024 | https://buh.ru/news/rezidentam-tor-rasshiryat-vozmozhnosti-po-primeneniyu-lgot-po-strakhovym-vznosam.html |
+| za.theses[2].primer | «ныне функции у ВЭБ.РФ» | «позже его функции передали ВЭБ.РФ» (без утверждения о текущем статусе) | https://legalacts.ru/doc/rasporjazhenie-pravitelstva-rf-ot-31122020-n-3710-r-ob-institutakh/ |
