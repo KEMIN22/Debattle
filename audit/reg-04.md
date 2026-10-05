@@ -21,3 +21,17 @@
 - Рискованно вслух: «блэкаут остановил всё» — соперник ответит, что банкоматы тоже встали (снятие −25%); говорить точную цифру −41% по картам.
 
 ## Итого: ошибок 5 (✗ 0, ⚠ 5, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| za.theses[1].primer | «Третья форма денег», пилот с 2023 | С 01.09.2026 цифровой рубль внедряется массово | https://www.cbr.ru/press/event?id=25772 |
+| za.theses[2].pochemu | Чек формируется в приложении сразу | Операция фиксируется, налоговой виден оборот | https://npd.nalog.ru/faq/ |
+| za.theses[2].primer | Чек формируется сразу | Самозанятые пробивают чек в «Мой налог», без декларации | https://npd.nalog.ru/faq/ |
+| protiv.theses[0].primer | Остановились карточные платежи и банкоматы | Траты по картам в зонах отключения −41% | https://www.bbvaresearch.com/en/publicaciones/spain-28a-a-flicker-in-consumption/ |
+| protiv.theses[2].primer | Швеция «предложила» обязать | С 01.07.2026 обязала продуктовые и аптеки брать наличные | https://www.riksdagen.se/en/news/articles/2026/may/27/the-possibility-to-use-cash-to-be-improved-fiu39_cms285b4cfc-0c3c-461a-9a6c-dcaaf6aeed6aen/ |
+| arsenal.stats[0] | Payment Expert: «остановило» платежи (403) | BBVA Research: карты −41%, Bizum −44%, снятие наличных −25% | https://www.bbvaresearch.com/en/publicaciones/spain-28a-a-flicker-in-consumption/ |
+| arsenal.stats[1] | Пилот с 08.2023 (bizmedia.kz) | Закон: с 01.09.2026 крупнейшие банки и торговля >120 млн ₽; все банки — до 09.2028 | https://www.cbr.ru/press/event?id=25772 |
+| arsenal.quote | Пусто, verified:false | «В обращении одновременно находятся наличные, безналичные и цифровые рубли. Они равны между собой.» — Банк России, verified:true | https://cbr.ru/fintech/dr/ |
+
+Не тронуто: protiv.infokiller[1] (утверждения об «остановке» в тексте нет); пункты ✓ и необязательные усиления (пенсии через почту, 88,9% безнала).
