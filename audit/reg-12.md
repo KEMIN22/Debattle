@@ -18,3 +18,11 @@ arsenal.quote пуста (verified:false) — проверять нечего.
 Рискованно вслух: не переходить на личность депутата Свинцова (критиковать схему, не человека); называя Instagram/Facebook, помнить, что Meta признана в РФ экстремистской.
 
 ## Итого: ошибок 1 (✗ 0, ⚠ 1, ? 0)
+
+## Исправления (fixer)
+| Путь в JSON | Было (кратко) | Стало (кратко) | Источник (URL) |
+|---|---|---|---|
+| arsenal.stats[0].url | gazeta.ru (не открывается) | expert.ru | https://expert.ru/news/avstraliya-stala-pervoy-stranoy-s-zapretom-podrostkam-polzovatsya-sotssetyami |
+| arsenal.stats[0].source | Газета.Ru | Эксперт со ссылкой на Bloomberg (вторичный источник) | https://expert.ru/news/avstraliya-stala-pervoy-stranoy-s-zapretom-podrostkam-polzovatsya-sotssetyami |
+| arsenal.stats[0].fact | «запретила соцсети детям до 16» | «запретила детям до 16 заводить аккаунты» (смотреть без входа можно) | https://expert.ru/news/avstraliya-stala-pervoy-stranoy-s-zapretom-podrostkam-polzovatsya-sotssetyami |
+| protiv.theses[0].primer | «Россия: предложили верификацию через Госуслуги» | «Депутат Свинцов предложил верификацию через Госуслуги» | https://www.mentoday.ru/life/news/22-12-2025/blokirovki-pokajutsya-melochyu-v-gosdume-anonsirovali-jestochaishie-zaprety-dlya-rossiyan-v-socsetyah/ |
