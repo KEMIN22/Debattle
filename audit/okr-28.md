@@ -42,3 +42,20 @@
 | protiv.infokiller[2].a | «Немного… лишь сигнал» | Мало людей, но эксперимент: причина в ленте | — |
 
 Не тронуто: za.theses[2] (Орбен) — аудит не предложил замену; держать как защиту.
+
+## Повторная проверка
+| # | Путь в JSON | Утверждение (кратко) | Вердикт | Источник (URL) | Что сделано |
+|---|---|---|---|---|---|
+| R1 | za.attacks[0] | Фогель: исследование 1 — корреляция; 2 — разовый показ профиля студентам | ✓ | https://news.utoledo.edu/?p=33537 («fake Facebook profiles and showed them to students») | — |
+| R2 | za.attacks[1]; za.infokiller[0].a | Девочки с трудностями: 32% хуже, 22% лучше, 45,5% без изменений | ✓ | https://www.thedrum.com/news/2021/09/27/facebook-denies-instagram-toxic-teens | — (22% и 45,5% — из заявления Facebook о своём опросе; называть «по внутреннему опросу компании») |
+| R3 | za.infokiller[2].a; arsenal.quote.author | Локвуд и Кунда 1997: достижимый успех вдохновляет, недостижимый подавляет | ✓ (вторичный) | https://theconversation.com/paralympian-role-models-media-hype-political-rhetoric-or-the-real-deal-65482 (дословно: «models of attainable success can be inspiring…»); psycnet не открылся | verified:false в quote оставлен |
+| R4 | za.theses[1].pochemu | Ван де Вен 2011, исследование 4: мотивирует, когда улучшение достижимо | ✓ | https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:%22Why%20envy%20outperforms%20admiration%22&resultType=core&format=json («only when people thought self-improvement was attainable») | — |
+| R5 | protiv.theses[2].pochemu | Фогель, исследование 2: «успешный» профиль снижал текущую самооценку | ✓ | https://news.utoledo.edu/?p=33537 («temporary exposure… upward comparison target… affected… state self-esteem») | — |
+| R6 | protiv.theses[2].primer; protiv.ask[1] | Хант 2018: 143 студента, 3 недели, лимит 30 мин | ⚠ → исправлено | https://www.sciencedaily.com/releases/2018/11/181108164316.htm («10 minutes per platform per day», 3 платформы, random) | «по 30 минут» → «по 30 минут в день» (оба места) |
+| R7 | za.theses[1]; protiv.attacks[1]; za.expect[2].a; za.attacks[2]; protiv.infokiller[2].a | Новые тезисы/ответы — логика и стиль | ✓ | — | Атаки бьют по своим тезисам (ПРОТИВ attacks[1] → ЗА №2; ЗА attacks[2] → ПРОТИВ №3); длина в норме. Нюанс: Хант — самоотчёт без слепого контроля; на «причина в ленте» ЗА может ответить «урезали всё время, не глянец» — это уже в za.attacks[2]. Следов Гольвитцера/Бандуры/«11 из 12» в карточке не осталось. |
+
+Итого повторно: ошибок 1 (✗ 0, ⚠ 1 — исправлено, ? 0). validate_card.py: OK, 0 замечаний.
+
+ГОТОВО
+- что изменилось: все 12 исправлений fixer подтверждены (факты по открытым страницам, логика и стиль в норме).
+- Хант 2018: уточнено «30 минут в день» в protiv.theses[2].primer и protiv.ask[1].
