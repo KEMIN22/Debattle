@@ -27,6 +27,12 @@ for f in sys.argv[1:]:
     for s in a['stats']:
         for k in ('fact', 'source', 'year', 'url', 'verified'):
             if k not in s: errs.append(n+' stat без '+k)
+    ms = a.get('more_stats', [])
+    if len(ms) > 8: errs.append(n+' more_stats>8')
+    for s in ms:
+        for k in ('fact', 'source', 'year', 'url', 'verified'):
+            if k not in s: errs.append(n+' more_stats без '+k)
+        need(s.get('fact'), 25, n+' more_stats.fact')
     for k in ('text', 'author', 'verified'):
         if k not in a['quote']: errs.append(n+' quote без '+k)
     need(a['life'], 25, n+' life')
