@@ -220,6 +220,18 @@ function factHtml(f){
  var v=f.verified===true,lnk=f.url?' <a href="'+h(f.url)+'" target="_blank" rel="noopener">источник</a>':'';
  return '<div class="it'+(v?'':' unv')+'">'+h(f.fact)+'<div class="ex">'+h([f.source,f.year].filter(Boolean).join(', '))+lnk+(v?' <span class="tag" style="background:var(--ok);color:#000">проверено</span>':' <span class="tag">не проверено</span>')+'</div></div>';
 }
+function criteriaHtml(c){
+ var E={mega:['лучше мегаполис','background:var(--o);color:#fff'],other:['лучше город поменьше','background:#fff;color:#000'],draw:['ничья','background:var(--pn2);color:#ddd']};
+ var o='<details open><summary>Критерии жизни ('+c.criteria.length+')</summary><div class="in">';
+ if(c.weights)o+='<div class="note">'+h(c.weights)+'</div>';
+ o+=c.criteria.map(function(k,i){
+  var e=E[k.edge]||E.draw,v=k.verified===true,lnk=k.url?' <a href="'+h(k.url)+'" target="_blank" rel="noopener">источник</a>':'';
+  return '<div class="it'+(v?'':' unv')+'"><b>'+(i+1)+'. '+h(k.name)+'</b> <span class="tag" style="'+e[1]+'">'+e[0]+'</span>'+
+   (k.metric?'<div class="ex">'+h(k.metric)+'</div>':'')+
+   '<div class="w">Мегаполис: '+h(k.mega)+'</div><div class="w">Город поменьше: '+h(k.other)+'</div>'+
+   '<div class="ex">'+h([k.source,k.year].filter(Boolean).join(', '))+lnk+(v?' <span class="tag" style="background:var(--ok);color:#000">проверено</span>':' <span class="tag">не проверено</span>')+(k.note?' · '+h(k.note):'')+'</div></div>'}).join('');
+ return o+'</div></details>';
+}
 function arsenalHtml(a){
  if(!a)return '<div class="empty">нет данных</div>';
  var o='<div class="lb">Статистика</div>'+(a.stats||[]).map(factHtml).join('');
@@ -244,6 +256,7 @@ function cardHtml(t,side,withSwitch){
  if(!c)return archetypeHtml(t,side,withSwitch);
  side=(side==='protiv'||side==='b')?'protiv':'za';
  var o='<div class="core">'+h(c.core)+'</div>';
+ if(c.criteria&&c.criteria.length)o+=criteriaHtml(c);
  if(withSwitch)o+='<div class="sw" id="sw"><button class="'+(side==='za'?'on':'')+'" data-act="side" data-v="za">За</button><button class="'+(side==='protiv'?'on':'')+'" data-act="side" data-v="protiv">Против</button></div>';
  o+=cardSideHtml(c,side);
  o+='<details><summary>Арсенал</summary><div class="in">'+arsenalHtml(c.arsenal)+'</div></details>';
