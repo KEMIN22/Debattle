@@ -22,11 +22,26 @@ for f in sys.argv[1:]:
         for k in ('expect', 'infokiller'):
             if len(x[k]) != 3: errs.append(f'{w} {k}!=3')
             for i, e in enumerate(x[k]): need(e['q'], 15, f'{w} {k}[{i}].q'); need(e['a'], 25, f'{w} {k}[{i}].a')
+    cr = c.get('criteria')
+    if cr is not None:
+        if not 5 <= len(cr) <= 10: errs.append(n+' criteria не 5–10')
+        for i, k in enumerate(cr):
+            for kk in ('name', 'mega', 'other', 'edge', 'source', 'year', 'url', 'verified'):
+                if kk not in k: errs.append(f'{n} criteria[{i}] без {kk}')
+            if k.get('edge') not in ('mega', 'other', 'draw'): errs.append(f'{n} criteria[{i}].edge')
+            for kk in ('mega', 'other', 'note', 'metric'):
+                if k.get(kk): need(k[kk], 25, f'{n} criteria[{i}].{kk}')
     a = c['arsenal']
     if len(a['stats']) != 2: errs.append(n+' stats!=2')
     for s in a['stats']:
         for k in ('fact', 'source', 'year', 'url', 'verified'):
             if k not in s: errs.append(n+' stat без '+k)
+    ms = a.get('more_stats', [])
+    if len(ms) > 8: errs.append(n+' more_stats>8')
+    for s in ms:
+        for k in ('fact', 'source', 'year', 'url', 'verified'):
+            if k not in s: errs.append(n+' more_stats без '+k)
+        need(s.get('fact'), 25, n+' more_stats.fact')
     for k in ('text', 'author', 'verified'):
         if k not in a['quote']: errs.append(n+' quote без '+k)
     need(a['life'], 25, n+' life')

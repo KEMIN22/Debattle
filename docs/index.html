@@ -126,6 +126,9 @@ function pick(a,n){var c=a.slice(),r=[];while(r.length<n&&c.length){r.push(c.spl
 var topicById=function(id){return D.topics.filter(function(t){return t.id===id})[0]};
 var clusterName=function(id){var c=D.clusters.filter(function(c){return c.id===id})[0];return c?c.name:''};
 var B=function(){return D.banks||{}};
+var STG={okr:['Окр. ','О','Окружной · ','Окружная'],reg:['Рег. ','Р','Региональный · ','Региональная'],extra:['Доп. ','Д','Доп. тема · ','Дополнительная']};
+var stg=function(t){return STG[t.stage]||STG.okr};
+var hasExtra=function(){return D.topics.some(function(t){return t.stage==='extra'})};
 var vis=function(){return D.topics.filter(function(t){return REG||t.stage!=='reg'})};
 function temN(n){var a=n%10,b=n%100;return n+' '+(a===1&&b!==11?'тема':a>=2&&a<=4&&(b<12||b>14)?'темы':'тем')}
 function regUI(){var b=$('regsw');if(!b)return;b.className='regsw'+(REG?' on':'');b.setAttribute('aria-pressed',REG?'true':'false');b.innerHTML='Региональные:<b>'+(REG?'ВКЛ':'ВЫКЛ')+'</b>'}
@@ -170,19 +173,19 @@ function route(){
  if(hs==='#/reg'&&!REG){location.hash='#/okr';return}
  if(hs==='#/draw')return viewDraw();
  if(hs==='#/banks')return viewBanks();
- viewHome(hs==='#/reg'?'reg':'okr');
+ viewHome(hs==='#/reg'?'reg':hs==='#/extra'?'extra':'okr');
 }
 
 /* ---------- главная ---------- */
 function tabsHtml(cur){
- return '<div class="tabs">'+[['okr','Окружные'],['reg','Региональные'],['banks','Банки']].filter(function(t){return REG||t[0]!=='reg'}).map(function(t){
+ return '<div class="tabs">'+[['okr','Окружные'],['reg','Региональные']].concat(hasExtra()?[['extra','Доп.']]:[]).concat([['banks','Банки']]).filter(function(t){return REG||t[0]!=='reg'}).map(function(t){
   return '<button class="tab'+(cur===t[0]?' on':'')+'" data-go="#/'+t[0]+'">'+t[1]+'</button>'}).join('')+'</div>';
 }
 function norm(s){return String(s||'').toLowerCase().replace(/ё/g,'е')}
 function topicRow(t,showStage){
  var ready=!!D.cards[t.id];
  return '<button class="topic" data-go="#/t/'+t.id+'"><span class="n">'+t.num+'</span><span class="t">'+h(t.short)+
-  '<small>'+(showStage?(t.stage==='okr'?'Окружной · ':'Региональный · '):'')+h(clusterName(t.cluster))+'</small></span>'+
+  '<small>'+(showStage?stg(t)[2]:'')+h(clusterName(t.cluster))+'</small></span>'+
   '<span class="badge'+(ready?' ok':'')+'">'+(ready?'карточка':'архетип')+'</span></button>';
 }
 function viewHome(stage){
@@ -217,9 +220,22 @@ function factHtml(f){
  var v=f.verified===true,lnk=f.url?' <a href="'+h(f.url)+'" target="_blank" rel="noopener">источник</a>':'';
  return '<div class="it'+(v?'':' unv')+'">'+h(f.fact)+'<div class="ex">'+h([f.source,f.year].filter(Boolean).join(', '))+lnk+(v?' <span class="tag" style="background:var(--ok);color:#000">проверено</span>':' <span class="tag">не проверено</span>')+'</div></div>';
 }
+function criteriaHtml(c){
+ var E={mega:['лучше мегаполис','background:var(--o);color:#fff'],other:['лучше город поменьше','background:#fff;color:#000'],draw:['ничья','background:var(--pn2);color:#ddd']};
+ var o='<details open><summary>Критерии жизни ('+c.criteria.length+')</summary><div class="in">';
+ if(c.weights)o+='<div class="note">'+h(c.weights)+'</div>';
+ o+=c.criteria.map(function(k,i){
+  var e=E[k.edge]||E.draw,v=k.verified===true,lnk=k.url?' <a href="'+h(k.url)+'" target="_blank" rel="noopener">источник</a>':'';
+  return '<div class="it'+(v?'':' unv')+'"><b>'+(i+1)+'. '+h(k.name)+'</b> <span class="tag" style="'+e[1]+'">'+e[0]+'</span>'+
+   (k.metric?'<div class="ex">'+h(k.metric)+'</div>':'')+
+   '<div class="w">Мегаполис: '+h(k.mega)+'</div><div class="w">Город поменьше: '+h(k.other)+'</div>'+
+   '<div class="ex">'+h([k.source,k.year].filter(Boolean).join(', '))+lnk+(v?' <span class="tag" style="background:var(--ok);color:#000">проверено</span>':' <span class="tag">не проверено</span>')+(k.note?' · '+h(k.note):'')+'</div></div>'}).join('');
+ return o+'</div></details>';
+}
 function arsenalHtml(a){
  if(!a)return '<div class="empty">нет данных</div>';
  var o='<div class="lb">Статистика</div>'+(a.stats||[]).map(factHtml).join('');
+ if(a.more_stats&&a.more_stats.length)o+='<div class="lb">Ещё цифры</div>'+a.more_stats.map(factHtml).join('');
  if(a.quote&&a.quote.text&&String(a.quote.text).trim()){var q=a.quote,v=q.verified===true;o+='<div class="lb">Цитата</div><div class="it'+(v?'':' unv')+'">«'+h(q.text)+'» — '+h(q.author)+(v?' <span class="tag" style="background:var(--ok);color:#000">проверено</span>':' <span class="tag">не проверено</span>')+'</div>'}
  if(a.life)o+='<div class="lb">Личный опыт</div><div class="it">'+h(a.life)+'</div>';
  return o;
@@ -240,6 +256,7 @@ function cardHtml(t,side,withSwitch){
  if(!c)return archetypeHtml(t,side,withSwitch);
  side=(side==='protiv'||side==='b')?'protiv':'za';
  var o='<div class="core">'+h(c.core)+'</div>';
+ if(c.criteria&&c.criteria.length)o+=criteriaHtml(c);
  if(withSwitch)o+='<div class="sw" id="sw"><button class="'+(side==='za'?'on':'')+'" data-act="side" data-v="za">За</button><button class="'+(side==='protiv'?'on':'')+'" data-act="side" data-v="protiv">Против</button></div>';
  o+=cardSideHtml(c,side);
  o+='<details><summary>Арсенал</summary><div class="in">'+arsenalHtml(c.arsenal)+'</div></details>';
@@ -262,7 +279,7 @@ function viewTopic(id){
  var t=topicById(id);if(!t||(t.stage==='reg'&&!REG)){location.hash='#/okr';return}
  if(!D.cards[id]&&S.side!=='a'&&S.side!=='b')S.side='a';
  if(D.cards[id]&&S.side!=='za'&&S.side!=='protiv')S.side='za';
- app.innerHTML='<button class="back" data-go="#/'+t.stage+'">← К списку</button><h1 class="ttl"><span class="n">'+(t.stage==='okr'?'Окр. ':'Рег. ')+t.num+'.</span> '+h(t.title)+'</h1>'+(t.partner?'<div class="partner">Партнёр: '+h(t.partner)+'</div>':'')+
+ app.innerHTML='<button class="back" data-go="#/'+t.stage+'">← К списку</button><h1 class="ttl"><span class="n">'+stg(t)[0]+t.num+'.</span> '+h(t.title)+'</h1>'+(t.partner?'<div class="partner">Партнёр: '+h(t.partner)+'</div>':'')+
   '<div id="card">'+cardHtml(t,S.side,true)+'</div><div class="row"><button class="btn alt" data-act="print1" data-v="'+id+'">🖨 Версия для печати</button></div>';
  app.dataset.tid=id;
 }
@@ -284,7 +301,7 @@ function act(a,v,el){
 /* ---------- печать ---------- */
 function printTopics(ts,allowFallback){
  var html=ts.map(function(t){
-  var c=D.cards[t.id],o='<div class="pc"><h3><span>'+(t.stage==='okr'?'О':'Р')+t.num+'</span>'+h(t.short)+'</h3>';
+  var c=D.cards[t.id],o='<div class="pc"><h3><span>'+stg(t)[1]+t.num+'</span>'+h(t.short)+'</h3>';
   if(c){
    o+='<div class="k">'+h(c.core)+'</div><div class="cols">'+['za','protiv'].map(function(s){
     var x=c[s];return '<div class="col"><h4>'+(s==='za'?'ЗА':'ПРОТИВ')+'</h4><div class="k">Критерий: '+h(x.criterion)+'</div><ul>'+
@@ -389,7 +406,7 @@ function drawBox(){
  if(DR.hidden){
   o='<div class="draw"><div class="big">🎲 Тема и позиция скрыты до старта</div><div style="margin-top:8px">'+compInfo(DR.comp)+'</div></div>';
  }else{
-  o='<div class="draw"><div class="partner">'+(t.stage==='okr'?'Окружная':'Региональная')+' · тема '+t.num+'</div><div class="big">'+h(t.title)+'</div>'+
+  o='<div class="draw"><div class="partner">'+stg(t)[3]+' · тема '+t.num+'</div><div class="big">'+h(t.title)+'</div>'+
    '<div class="side">'+(DR.side==='za'?'ЗА':'ПРОТИВ')+'</div>'+(DR.comp?'<div class="note"><b>Усложнение: '+h(DR.comp.name)+'</b><div style="margin-top:6px">'+compInfo(DR.comp)+'</div></div>':'')+'</div>'+
    '<button class="btn alt" style="width:100%" data-act="reveal">Показать разбор</button><div id="drawcard"></div>';
  }
